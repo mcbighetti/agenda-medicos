@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Consulta de Médicos — por dia</title>
+
   <style>
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
     body { margin: 0; background: #f6f7f9; color: #111; }
@@ -18,10 +19,11 @@
     .day-btn {
       border: 1px solid #d0d5dd; background: white; padding: 10px 12px; border-radius: 10px;
       cursor: pointer; font-weight: 700; min-width: 54px;
+      touch-action: manipulation;
     }
     .day-btn.active { border-color: #111; }
     .search {
-      flex: 1; min-width: 240px;
+      flex: 1; min-width: 220px;
       border: 1px solid #d0d5dd; border-radius: 10px; padding: 10px 12px; background: #fff;
       font-size: 14px;
     }
@@ -42,8 +44,33 @@
     .addr { margin: 10px 0 0; font-size: 12px; color: #475467; }
     .empty { background: #fff; border: 1px dashed #d0d5dd; padding: 18px; border-radius: 14px; color:#475467; }
     .footer { font-size: 11px; color:#98a2b3; margin-top: 18px; }
+
+    /* Botão Atualizar agora */
+    .refresh-wrap { display:flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .refresh-btn{
+      border: 1px solid #111;
+      background: #111;
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 800;
+      touch-action: manipulation;
+    }
+    .refresh-btn:active{ transform: translateY(1px); }
+
+    /* Mobile / Tablet */
+    @media (max-width: 520px){
+      header { padding: 14px 12px 10px; }
+      .day-btn { padding: 12px 14px; min-width: 64px; }
+      .search { font-size: 16px; } /* evita zoom no iPhone */
+      .grid { grid-template-columns: 1fr; }
+      .refresh-btn { width: 100%; }
+      .refresh-wrap { width: 100%; }
+    }
   </style>
 
+  <!-- Login (mantido) -->
   <style>
     .login-overlay{
       position:fixed; inset:0; background:rgba(246,247,249,.98);
@@ -69,275 +96,322 @@
     .login-err{ margin-top:10px; color:#b42318; font-size:12px; display:none;}
     .login-note{ margin-top:10px; color:#98a2b3; font-size:11px;}
   </style>
-
 </head>
 
 <body>
-
-<div class="login-overlay" id="loginOverlay" aria-hidden="false">
-  <div class="login-card">
-    <h2>Acesso</h2>
-    <p>Este bloqueio é <b>apenas</b> para evitar acesso casual. Como é um site estático (GitHub Pages), quem souber inspecionar o código pode descobrir a senha.</p>
-    <label for="user">Usuário</label>
-    <input id="user" autocomplete="username" />
-    <label for="pass">Senha</label>
-    <input id="pass" type="password" autocomplete="current-password" />
-    <div class="login-actions">
-      <button class="login-btn" id="loginBtn">Entrar</button>
+  <!-- Login Overlay -->
+  <div class="login-overlay" id="loginOverlay" aria-hidden="false">
+    <div class="login-card">
+      <h2>Acesso</h2>
+      <p>Este bloqueio é <b>apenas</b> para evitar acesso casual. Como é um site estático (GitHub Pages), quem souber inspecionar o código pode descobrir a senha.</p>
+      <label for="user">Usuário</label>
+      <input id="user" autocomplete="username" />
+      <label for="pass">Senha</label>
+      <input id="pass" type="password" autocomplete="current-password" />
+      <div class="login-actions">
+        <button class="login-btn" id="loginBtn" type="button">Entrar</button>
+      </div>
+      <div class="login-err" id="loginErr">Usuário ou senha inválidos.</div>
+      <div class="login-note">Dica: para segurança real, use Netlify Identity / Cloudflare Access / backend.</div>
     </div>
-    <div class="login-err" id="loginErr">Usuário ou senha inválidos.</div>
-    <div class="login-note">Dica: para segurança real, use Netlify Identity / Cloudflare Access / backend.</div>
   </div>
-</div>
 
-<header>
-  <h1>Consulta rápida — atendimentos por dia</h1>
-  <div class="row" id="days"></div>
-  <div class="row" style="margin-top:10px;">
-    <input id="q" class="search" placeholder="Buscar por médico, cidade, especialidade, bairro, observação..." />
-  </div>
-  <div class="meta" id="meta">Carregando…</div>
-</header>
+  <header>
+    <h1>Consulta rápida — atendimentos por dia</h1>
+    <div class="row" id="days"></div>
 
-<main>
-  <div class="grid" id="list"></div>
-  <div class="footer" id="footer"></div>
-</main>
+    <div class="row" style="margin-top:10px;">
+      <input id="q" class="search" placeholder="Buscar por médico, cidade, especialidade, bairro, observação..." />
+    </div>
 
-<script>
-  const DATA_URL = './data.json?v=' + Date.now();
+    <!-- Linha com contador + botão -->
+    <div class="refresh-wrap" style="margin-top:10px;">
+      <div class="meta" id="meta">Carregando…</div>
+      <button class="refresh-btn" id="refreshBtn" type="button">Atualizar agora</button>
+    </div>
 
+    <!-- Última atualização -->
+    <div class="meta" id="updatedAt"></div>
+  </header>
 
-  const DAYS = [
-    { key: 'SEG', label: 'Seg' },
-    { key: 'TER', label: 'Ter' },
-    { key: 'QUA', label: 'Qua' },
-    { key: 'QUI', label: 'Qui' },
-    { key: 'SEX', label: 'Sex' },
-  ];
+  <main>
+    <div class="grid" id="list"></div>
+    <div class="footer" id="footer"></div>
+  </main>
 
-  let data = [];
-  let activeDay = guessTodayKey();
-  let query = '';
+  <script>
+    // Sempre carregaremos o JSON com cache-buster dentro do load()
+    const DAYS = [
+      { key: 'SEG', label: 'Seg' },
+      { key: 'TER', label: 'Ter' },
+      { key: 'QUA', label: 'Qua' },
+      { key: 'QUI', label: 'Qui' },
+      { key: 'SEX', label: 'Sex' },
+    ];
 
-  const $days = document.getElementById('days');
-  const $list = document.getElementById('list');
-  const $meta = document.getElementById('meta');
-  const $q = document.getElementById('q');
-  const $footer = document.getElementById('footer');
+    let data = [];
+    let activeDay = guessTodayKey();
+    let query = '';
 
-  function guessTodayKey() {
-    // JS: 0=Dom, 1=Seg...
-    const map = ['DOM','SEG','TER','QUA','QUI','SEX','SAB'];
-    const k = map[new Date().getDay()];
-    return (k === 'DOM' || k === 'SAB') ? 'SEG' : k;
-  }
+    const $days = document.getElementById('days');
+    const $list = document.getElementById('list');
+    const $meta = document.getElementById('meta');
+    const $updatedAt = document.getElementById('updatedAt');
+    const $q = document.getElementById('q');
+    const $footer = document.getElementById('footer');
+    const $refreshBtn = document.getElementById('refreshBtn');
 
-  function normalize(s) {
-    return (s ?? '')
-      .toString()
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/\p{Diacritic}/gu, '');
-  }
-
-  function extractFirstTime(s) {
-    const m = (s || '').match(/(\d{1,2}):(\d{2})/);
-    if (!m) return 9999;
-    return parseInt(m[1].padStart(2,'0') + m[2], 10);
-  }
-
-  function rowStartTime(row) {
-    // usa o primeiro horário encontrado entre manhã/tarde
-    return Math.min(extractFirstTime(row.manha), extractFirstTime(row.tarde));
-  }
-
-  function renderDays() {
-    $days.innerHTML = '';
-    DAYS.forEach(d => {
-      const btn = document.createElement('button');
-      btn.className = 'day-btn' + (d.key === activeDay ? ' active' : '');
-      btn.textContent = d.label;
-      btn.onclick = () => { activeDay = d.key; render(); renderDays(); };
-      $days.appendChild(btn);
-    });
-  }
-
-  function matchesQuery(row, q) {
-    if (!q) return true;
-    const hay = normalize([
-      row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
-      row.observacao, row.telefone, row.celular, row.email, row.utc_brick,
-      row.manha, row.tarde
-    ].join(' | '));
-    return hay.includes(q);
-  }
-
-  function formatHorario(row) {
-    const parts = [];
-    if (row.manha) parts.push(`Manhã: ${row.manha}`);
-    if (row.tarde) parts.push(`Tarde: ${row.tarde}`);
-    return parts.length ? parts.join(' • ') : '';
-  }
-
-  function render() {
-    const q = normalize(query);
-    const filtered = data
-      .filter(r => (r.dia_semana || '').toUpperCase() === activeDay)
-      .filter(r => matchesQuery(r, q))
-      .sort((a,b) => rowStartTime(a) - rowStartTime(b));
-
-    $meta.textContent = `${filtered.length} atendimento(s) em ${activeDay} • Total de registros: ${data.length}`;
-    $list.innerHTML = '';
-
-    if (filtered.length === 0) {
-      const div = document.createElement('div');
-      div.className = 'empty';
-      div.textContent = 'Nenhum atendimento encontrado para este dia com esse filtro.';
-      $list.appendChild(div);
-      return;
+    function guessTodayKey() {
+      const map = ['DOM','SEG','TER','QUA','QUI','SEX','SAB'];
+      const k = map[new Date().getDay()];
+      return (k === 'DOM' || k === 'SAB') ? 'SEG' : k;
     }
 
-    filtered.forEach(r => {
-      const card = document.createElement('div');
-      card.className = 'card';
+    function normalize(s) {
+      return (s ?? '')
+        .toString()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/\p{Diacritic}/gu, '');
+    }
 
-      const title = document.createElement('div');
-      title.className = 'title';
+    function extractFirstTime(s) {
+      const m = (s || '').match(/(\d{1,2}):(\d{2})/);
+      if (!m) return 9999;
+      return parseInt(m[1].padStart(2,'0') + m[2], 10);
+    }
 
-      const name = document.createElement('p');
-      name.className = 'name';
-      name.textContent = r.medico_nome || '(Sem nome)';
+    function rowStartTime(row) {
+      return Math.min(extractFirstTime(row.manha), extractFirstTime(row.tarde));
+    }
 
-      const time = document.createElement('div');
-      time.className = 'time';
-      time.textContent = formatHorario(r);
-
-      title.appendChild(name);
-      title.appendChild(time);
-
-      const sub = document.createElement('div');
-      sub.className = 'sub';
-      const pieces = [r.especialidade, r.cidade].filter(Boolean);
-      sub.textContent = pieces.join(' • ');
-
-      const pills = document.createElement('div');
-      pills.className = 'pills';
-      const pillItems = [
-        r.bairro ? `Bairro: ${r.bairro}` : '',
-        r.telefone ? `Tel: ${r.telefone}` : '',
-        r.celular ? `Cel: ${r.celular}` : '',
-        r.email ? `E-mail: ${r.email}` : '',
-      ].filter(Boolean);
-      pillItems.forEach(t => {
-        const p = document.createElement('span');
-        p.className = 'pill';
-        p.textContent = t;
-        pills.appendChild(p);
+    function renderDays() {
+      $days.innerHTML = '';
+      DAYS.forEach(d => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'day-btn' + (d.key === activeDay ? ' active' : '');
+        btn.textContent = d.label;
+        btn.onclick = () => { activeDay = d.key; render(); renderDays(); };
+        $days.appendChild(btn);
       });
-
-      const addr = document.createElement('div');
-      addr.className = 'addr';
-      const addrPieces = [r.endereco, r.cep ? `CEP: ${r.cep}` : ''].filter(Boolean);
-      if (addrPieces.length) addr.textContent = addrPieces.join(' • ');
-
-      const obs = document.createElement('div');
-      obs.className = 'obs';
-      if (r.observacao) obs.textContent = `Obs: ${r.observacao}`;
-
-      card.appendChild(title);
-      card.appendChild(sub);
-      if (pills.childNodes.length) card.appendChild(pills);
-      if (addr.textContent) card.appendChild(addr);
-      if (r.observacao) card.appendChild(obs);
-
-      $list.appendChild(card);
-    });
-  }
-
-  async function load() {
-    try {
-      const res = await fetch(DATA_URL, { cache: 'no-store' });
-      if (!res.ok) throw new Error('Falha ao carregar data.json');
-      data = await res.json();
-
-      if (!Array.isArray(data)) throw new Error('data.json precisa ser um array de objetos');
-
-      renderDays();
-      render();
-      $footer.textContent = `Fonte: ${DATA_URL} • Dica: publique esta pasta (index.html + data.json) no GitHub Pages/Netlify para funcionar no celular.`;
-    } catch (e) {
-      $meta.textContent = 'Erro ao carregar dados.';
-      $list.innerHTML = `<div class="empty">${e.message}<br><br>
-      Dica: coloque o <b>index.html</b> e o <b>data.json</b> na mesma pasta e abra via um servidor (GitHub Pages/Netlify).
-      </div>`;
     }
-  }
 
-  $q.addEventListener('input', (ev) => {
-    query = ev.target.value || '';
-    render();
-  });
+    function matchesQuery(row, q) {
+      if (!q) return true;
+      const hay = normalize([
+        row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
+        row.observacao, row.telefone, row.celular, row.email,
+        row.manha, row.tarde
+      ].join(' | '));
+      return hay.includes(q);
+    }
 
-  load();
-</script>
+    function formatHorario(row) {
+      const parts = [];
+      if (row.manha) parts.push(`Manhã: ${row.manha}`);
+      if (row.tarde) parts.push(`Tarde: ${row.tarde}`);
+      return parts.length ? parts.join(' • ') : '';
+    }
 
-<script>
-  // ⚠️ Bloqueio simples (client-side). NÃO é segurança real.
-  const AUTH_USER = "Murilo";
-  const AUTH_PASS = "@@13Nov2016";
-  const KEY = "agenda_auth_ok_v1";
+    function render() {
+      const q = normalize(query);
+      const filtered = data
+        .filter(r => (r.dia_semana || '').toUpperCase() === activeDay)
+        .filter(r => matchesQuery(r, q))
+        .sort((a,b) => rowStartTime(a) - rowStartTime(b));
 
-  function showLogin(show){
-    const ov = document.getElementById("loginOverlay");
-    if(!ov) return;
-    ov.style.display = show ? "flex" : "none";
-    ov.setAttribute("aria-hidden", show ? "false" : "true");
-  }
+      $meta.textContent = `${filtered.length} atendimento(s) em ${activeDay} • Total de registros: ${data.length}`;
+      $list.innerHTML = '';
 
-  function setErr(show){
-    const el = document.getElementById("loginErr");
-    if(!el) return;
-    el.style.display = show ? "block" : "none";
-  }
-
-  function initLogin(){
-    try{
-      if (sessionStorage.getItem(KEY) === "1"){
-        showLogin(false);
+      if (filtered.length === 0) {
+        const div = document.createElement('div');
+        div.className = 'empty';
+        div.textContent = 'Nenhum atendimento encontrado para este dia com esse filtro.';
+        $list.appendChild(div);
         return;
       }
-    }catch(e){}
 
-    showLogin(true);
+      filtered.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'card';
 
-    const btn = document.getElementById("loginBtn");
-    const u = document.getElementById("user");
-    const p = document.getElementById("pass");
+        const title = document.createElement('div');
+        title.className = 'title';
 
-    function attempt(){
-      const ok = (u.value === AUTH_USER && p.value === AUTH_PASS);
-      if(ok){
-        try{ sessionStorage.setItem(KEY,"1"); }catch(e){}
-        setErr(false);
-        showLogin(false);
+        const name = document.createElement('p');
+        name.className = 'name';
+        name.textContent = r.medico_nome || '(Sem nome)';
+
+        const time = document.createElement('div');
+        time.className = 'time';
+        time.textContent = formatHorario(r);
+
+        title.appendChild(name);
+        title.appendChild(time);
+
+        const sub = document.createElement('div');
+        sub.className = 'sub';
+        const pieces = [r.especialidade, r.cidade].filter(Boolean);
+        sub.textContent = pieces.join(' • ');
+
+        const pills = document.createElement('div');
+        pills.className = 'pills';
+        const pillItems = [
+          r.bairro ? `Bairro: ${r.bairro}` : '',
+          r.telefone ? `Tel: ${r.telefone}` : '',
+          r.celular ? `Cel: ${r.celular}` : '',
+          r.email ? `E-mail: ${r.email}` : '',
+        ].filter(Boolean);
+        pillItems.forEach(t => {
+          const p = document.createElement('span');
+          p.className = 'pill';
+          p.textContent = t;
+          pills.appendChild(p);
+        });
+
+        const addr = document.createElement('div');
+        addr.className = 'addr';
+        const addrPieces = [r.endereco, r.cep ? `CEP: ${r.cep}` : ''].filter(Boolean);
+        if (addrPieces.length) addr.textContent = addrPieces.join(' • ');
+
+        const obs = document.createElement('div');
+        obs.className = 'obs';
+        if (r.observacao) obs.textContent = `Obs: ${r.observacao}`;
+
+        card.appendChild(title);
+        card.appendChild(sub);
+        if (pills.childNodes.length) card.appendChild(pills);
+        if (addr.textContent) card.appendChild(addr);
+        if (r.observacao) card.appendChild(obs);
+
+        $list.appendChild(card);
+      });
+    }
+
+    function setUpdatedAtText(payload, fallbackTotal) {
+      // payload pode ser array (formato antigo) ou {meta, registros}
+      if (Array.isArray(payload)) {
+        $updatedAt.textContent = '';
+        return;
+      }
+
+      const meta = payload?.meta || {};
+      const total = (typeof meta.total_registros === 'number') ? meta.total_registros : fallbackTotal;
+
+      if (meta.updated_at) {
+        const d = new Date(meta.updated_at);
+        const ok = !isNaN(d.getTime());
+        $updatedAt.textContent = ok
+          ? `Última atualização: ${d.toLocaleString('pt-BR')} • Registros: ${total}`
+          : `Registros: ${total}`;
       } else {
-        setErr(true);
+        $updatedAt.textContent = `Registros: ${total}`;
       }
     }
 
-    btn.addEventListener("click", attempt);
-    p.addEventListener("keydown", (e)=>{ if(e.key==="Enter") attempt(); });
-    u.addEventListener("keydown", (e)=>{ if(e.key==="Enter") attempt(); });
-  }
+    async function load() {
+      try {
+        $meta.textContent = 'Carregando…';
+        $list.innerHTML = '';
 
-  // roda quando DOM estiver pronto
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initLogin);
-  } else {
-    initLogin();
-  }
-</script>
+        const url = './data.json?v=' + Date.now();
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Falha ao carregar data.json');
 
+        const payload = await res.json();
+
+        // Aceita 2 formatos:
+        // 1) Antigo: array
+        // 2) Novo: { meta: {...}, registros: [...] }
+        if (Array.isArray(payload)) {
+          data = payload;
+          setUpdatedAtText(payload, data.length);
+        } else {
+          data = Array.isArray(payload.registros) ? payload.registros : [];
+          setUpdatedAtText(payload, data.length);
+        }
+
+        if (!Array.isArray(data)) throw new Error('data.json inválido (esperado array ou {registros: []}).');
+
+        renderDays();
+        render();
+        $footer.textContent = `Fonte: data.json • Atualização automática via planilha.`;
+      } catch (e) {
+        $meta.textContent = 'Erro ao carregar dados.';
+        $updatedAt.textContent = '';
+        $list.innerHTML = `<div class="empty">${String(e.message || e)}<br><br>
+        Dica: confirme se <b>data.json</b> está no mesmo diretório do <b>index.html</b>.
+        </div>`;
+      }
+    }
+
+    $q.addEventListener('input', (ev) => {
+      query = ev.target.value || '';
+      render();
+    });
+
+    $refreshBtn.addEventListener('click', async () => {
+      await load();
+    });
+
+    load();
+  </script>
+
+  <script>
+    // ⚠️ Bloqueio simples (client-side). NÃO é segurança real.
+    const AUTH_USER = "Murilo";
+    const AUTH_PASS = "@@13Nov2016";
+    const KEY = "agenda_auth_ok_v1";
+
+    function showLogin(show){
+      const ov = document.getElementById("loginOverlay");
+      if(!ov) return;
+      ov.style.display = show ? "flex" : "none";
+      ov.setAttribute("aria-hidden", show ? "false" : "true");
+    }
+
+    function setErr(show){
+      const el = document.getElementById("loginErr");
+      if(!el) return;
+      el.style.display = show ? "block" : "none";
+    }
+
+    function initLogin(){
+      try{
+        if (sessionStorage.getItem(KEY) === "1"){
+          showLogin(false);
+          return;
+        }
+      }catch(e){}
+
+      showLogin(true);
+
+      const btn = document.getElementById("loginBtn");
+      const u = document.getElementById("user");
+      const p = document.getElementById("pass");
+
+      function attempt(){
+        const ok = (u.value === AUTH_USER && p.value === AUTH_PASS);
+        if(ok){
+          try{ sessionStorage.setItem(KEY,"1"); }catch(e){}
+          setErr(false);
+          showLogin(false);
+        } else {
+          setErr(true);
+        }
+      }
+
+      btn.addEventListener("click", attempt);
+      p.addEventListener("keydown", (e)=>{ if(e.key==="Enter") attempt(); });
+      u.addEventListener("keydown", (e)=>{ if(e.key==="Enter") attempt(); });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initLogin);
+    } else {
+      initLogin();
+    }
+  </script>
 </body>
 </html>
