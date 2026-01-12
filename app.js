@@ -121,15 +121,88 @@ function buildWazeLink(row){
 }
 
 // ✅ regra fiel: período depende de existir horário naquele período
-function matchPeriodo(row, periodo){
+function firstTimeMinutes(raw){
+  const { start } = extractTimeRange(raw);
+  if (!start) return null;
+  const m = start.match(/^(\d{2}):(\d{2})$/);
+  if (!m) return null;
+  return (parseInt(m[1],10) * 60) + parseInt(m[2],10);
+}
+
+function classifyAsPeriod(raw){
+  // retorna "MANHA" ou "TARDE" baseado no horário
+  const mins = firstTimeMinutes(raw);
+  if (mins == null) return null;
+  return mins < (12 * 60) ? "MANHA" : "TARDE";
+}
+
+function hasAnyMorning(row){
   const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
   const tarde = getField(row, ["tarde","TARDE","Tarde"]);
-  const hasM = hasTimeValue(manha);
-  const hasT = hasTimeValue(tarde);
 
-  if (periodo === "MANHA") return hasM;
-  if (periodo === "TARDE") return hasT;
-  return (hasM || hasT); // AMBOS
+  // pode estar invertido no JSON — então avalia os dois campos
+  const p1 = classifyAsPeriod(manha);
+  const p2 = classifyAsPeriod(tarde);
+
+  return p1 === "MANHA" || p2 === "MANHA";
+}
+
+function hasAnyAfternoon(row){
+  const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
+  const tarde = getField(row, ["tarde","TARDE","Tarde"]);
+
+  const p1 = classifyAsPeriod(manha);
+  const p2 = classifyAsPeriod(tarde);
+
+  return p1 === "TARDE" || p2 === "TARDE";
+}
+
+// ✅ substitui a matchPeriodo atual por esta:
+function matchPeriodo(row, periodo){
+  if (periodo === "MANHA") return hasAnyMorning(row);
+  if (periodo === "TARDE") return hasAnyAfternoon(row);
+  return hasAnyMorning(row) || hasAnyAfternoon(row);
+}
+
+// ✅ e pra renderizar os horários no card, use isso:
+function makeTimeBlockSmart(row){
+  const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
+  const tarde = getField(row, ["tarde","TARDE","Tarde"]);
+
+  const candidates = [manha, tarde].filter(v => v != null && String(v).trim() !== "");
+
+  const morningList = [];
+  const afternoonList = [];
+
+  for (const c of candidates) {
+    if (!hasTimeValue(c)) continue;
+    const period = classifyAsPeriod(c);
+    if (period === "MANHA") morningList.push(displayRange(c));
+    else if (period === "TARDE") afternoonList.push(displayRange(c));
+    else {
+      // se não conseguir classificar, joga como tarde (mais seguro)
+      afternoonList.push(displayRange(c));
+    }
+  }
+
+  const wrap = document.createElement("div");
+  wrap.className = "times";
+
+  if (morningList.length) {
+    const rowEl = document.createElement("div");
+    rowEl.className = "time-row";
+    rowEl.innerHTML = `<span class="time-label">Manhã</span><span class="time-value">${morningList.join(" • ")}</span>`;
+    wrap.appendChild(rowEl);
+  }
+
+  if (afternoonList.length) {
+    const rowEl = document.createElement("div");
+    rowEl.className = "time-row";
+    rowEl.innerHTML = `<span class="time-label">Tarde</span><span class="time-value">${afternoonList.join(" • ")}</span>`;
+    wrap.appendChild(rowEl);
+  }
+
+  return wrap;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
