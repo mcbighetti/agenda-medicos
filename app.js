@@ -1,7 +1,10 @@
-// app.js
-// Observação: este app lê data.json em 2 formatos:
-// 1) array (formato antigo)
-// 2) { meta: {...}, registros: [...] } (formato novo)
+// app.js (robusto)
+// - Aceita variações de nomes de colunas (tarde/TARDE/...)
+// - Filtro Tarde/Manhã funciona mesmo com formatos diferentes
+// - "Atualizar agora" recarrega do RAW (evita cache do Pages)
+
+// ⚠️ Ajuste aqui se mudar repo/branch:
+const RAW_DATA_URL_BASE = "https://raw.githubusercontent.com/mcbighetti/agenda-medicos/main/data.json";
 
 const DAYS = [
   { key: 'SEG', label: 'Seg' },
@@ -51,25 +54,57 @@ function normalize(s) {
     .replace(/\p{Diacritic}/gu, '');
 }
 
+// Pega um campo aceitando variações: "tarde", "TARDE", "tarde " etc.
+function getField(row, candidates) {
+  for (const key of candidates) {
+    if (key in row) return row[key];
+  }
+  // tenta match "case-insensitive" e ignorando espaços
+  const keys = Object.keys(row);
+  for (const k of keys) {
+    const nk = normalize(k).replace(/\s+/g, '');
+    for (const c of candidates) {
+      const nc = normalize(c).replace(/\s+/g, '');
+      if (nk === nc) return row[k];
+    }
+  }
+  return undefined;
+}
+
 function isISODateString(v){
   const s = (v ?? '').toString().trim();
-  return /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/.test(s);
+  return /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z)?$/.test(s);
+}
+
+function excelFractionToHHmm(n){
+  if (typeof n !== 'number') return '';
+  if (!(n >= 0 && n < 1)) return '';
+  const totalMinutes = Math.round(n * 24 * 60);
+  const hh = String(Math.floor(totalMinutes / 60) % 24).padStart(2,'0');
+  const mm = String(totalMinutes % 60).padStart(2,'0');
+  return `${hh}:${mm}`;
 }
 
 function toHHmm(v){
   if (v == null) return '';
-  const s = v.toString().trim();
 
-  // Ex: "15:00-17:00" ou "15:00 - 17:00"
+  if (typeof v === 'number') {
+    const hhmm = excelFractionToHHmm(v);
+    return hhmm || String(v);
+  }
+
+  const s = v.toString().trim();
+  if (!s) return '';
+
   const range = s.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/);
   if (range) return `${range[1]}-${range[2]}`;
 
-  // Ex: "15:00"
   const hm = s.match(/^\d{1,2}:\d{2}$/);
   if (hm) return s;
 
-  // Ex: ISO "1899-12-30T16:00:00.000Z"
   if (isISODateString(s)) {
+    const m = s.match(/T(\d{2}):(\d{2}):/);
+    if (m) return `${m[1]}:${m[2]}`;
     const d = new Date(s);
     if (!isNaN(d.getTime())) {
       const hh = String(d.getHours()).padStart(2,'0');
@@ -78,7 +113,6 @@ function toHHmm(v){
     }
   }
 
-  // qualquer outro texto: retorna como está
   return s;
 }
 
@@ -89,30 +123,39 @@ function hasTimeValue(v){
   return true;
 }
 
-function extractFirstTime(s) {
-  const t = toHHmm(s);
+function extractFirstTime(v) {
+  const t = toHHmm(v);
   const m = (t || '').match(/(\d{1,2}):(\d{2})/);
   if (!m) return 9999;
   return parseInt(m[1].padStart(2,'0') + m[2], 10);
 }
 
 function rowStartTime(row) {
-  return Math.min(extractFirstTime(row.manha), extractFirstTime(row.tarde));
+  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha','MANHA ']);
+  const tarde = getField(row, ['tarde','TARDE','Tarde','TARDE ']);
+  return Math.min(extractFirstTime(manha), extractFirstTime(tarde));
 }
 
 function isAgendado(row) {
-  return (row.agendado || '').toString().trim().toUpperCase() === 'S';
+  const ag = getField(row, ['agendado','AGENDADO','AGENDADO?','Agendado']);
+  return (ag || '').toString().trim().toUpperCase() === 'S';
 }
 
 function matchesQuery(row, q) {
   if (!q) return true;
+
+  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
+  const tarde = getField(row, ['tarde','TARDE','Tarde']);
+  const ag = getField(row, ['agendado','AGENDADO','AGENDADO?','Agendado']);
+
   const hay = normalize([
     row.rota,
     row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
     row.observacao, row.telefone, row.celular, row.email,
-    row.manha, row.tarde,
-    row.agendado
+    manha, tarde,
+    ag
   ].join(' | '));
+
   return hay.includes(q);
 }
 
@@ -121,10 +164,9 @@ function buildWazeLink(row) {
   if (row.endereco) parts.push(row.endereco);
   if (row.bairro) parts.push(row.bairro);
   if (row.cidade) parts.push(row.cidade);
-  const q = parts.filter(Boolean).join(', ');
-  if (!q) return null;
-
-  return `https://waze.com/ul?q=${encodeURIComponent(q)}&navigate=yes`;
+  const qq = parts.filter(Boolean).join(', ');
+  if (!qq) return null;
+  return `https://waze.com/ul?q=${encodeURIComponent(qq)}&navigate=yes`;
 }
 
 function renderDays() {
@@ -136,7 +178,6 @@ function renderDays() {
     btn.textContent = d.label;
     btn.onclick = () => {
       activeDay = d.key;
-      // ao trocar o dia, já atualiza (dia é navegação, não filtro)
       renderDays();
       render();
     };
@@ -144,24 +185,59 @@ function renderDays() {
   });
 }
 
+function formatHorario(row) {
+  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
+  const tarde = getField(row, ['tarde','TARDE','Tarde']);
+  const parts = [];
+  if (hasTimeValue(manha)) parts.push(`Manhã: ${toHHmm(manha)}`);
+  if (hasTimeValue(tarde)) parts.push(`Tarde: ${toHHmm(tarde)}`);
+  return parts.join(' • ');
+}
+
+function setUpdatedAtText(payload, fallbackTotal) {
+  if (Array.isArray(payload)) {
+    $updatedAt.textContent = `Registros: ${fallbackTotal}`;
+    return;
+  }
+  const meta = payload?.meta || {};
+  const total = (typeof meta.total_registros === 'number') ? meta.total_registros : fallbackTotal;
+
+  if (meta.updated_at) {
+    const d = new Date(meta.updated_at);
+    const ok = !isNaN(d.getTime());
+    $updatedAt.textContent = ok
+      ? `Última atualização: ${d.toLocaleString('pt-BR')} • Registros: ${total}`
+      : `Registros: ${total}`;
+  } else {
+    $updatedAt.textContent = `Registros: ${total}`;
+  }
+}
+
 function render() {
   const q = normalize(appliedState.query);
   const rota = appliedState.rota;
-  const ag = appliedState.ag;
+  const agFilter = appliedState.ag;
   const periodo = appliedState.periodo;
 
   const filtered = data
     .filter(r => (r.dia_semana || '').toUpperCase() === activeDay)
     .filter(r => (rota === 'TODAS' ? true : (r.rota || '') === rota))
     .filter(r => {
-      const v = (r.agendado || '').toString().trim().toUpperCase();
-      if (ag === 'S') return v === 'S';
-      if (ag === 'N') return v === 'N' || v === '';
+      const ag = getField(r, ['agendado','AGENDADO','AGENDADO?','Agendado']);
+      const v = (ag || '').toString().trim().toUpperCase();
+      if (agFilter === 'S') return v === 'S';
+      if (agFilter === 'N') return v === 'N' || v === '';
       return true;
     })
     .filter(r => {
-      if (periodo === 'MANHA') return hasTimeValue(r.manha);
-      if (periodo === 'TARDE') return hasTimeValue(r.tarde);
+      // ✅ Se estiver AGENDADO, não some por período (Manhã/Tarde)
+      if (isAgendado(r)) return true;
+
+      const manha = getField(r, ['manha','MANHA','MANHÃ','Manhã','Manha']);
+      const tarde = getField(r, ['tarde','TARDE','Tarde']);
+
+      if (periodo === 'MANHA') return hasTimeValue(manha);
+      if (periodo === 'TARDE') return hasTimeValue(tarde);
       return true;
     })
     .filter(r => matchesQuery(r, q))
@@ -198,10 +274,7 @@ function render() {
       badge.textContent = 'AGENDADO';
       time.appendChild(badge);
     } else {
-      const parts = [];
-      if (hasTimeValue(r.manha)) parts.push(`Manhã: ${toHHmm(r.manha)}`);
-      if (hasTimeValue(r.tarde)) parts.push(`Tarde: ${toHHmm(r.tarde)}`);
-      time.textContent = parts.length ? parts.join(' • ') : '';
+      time.textContent = formatHorario(r);
     }
 
     title.appendChild(name);
@@ -260,31 +333,13 @@ function render() {
   });
 }
 
-function setUpdatedAtText(payload, fallbackTotal) {
-  if (Array.isArray(payload)) {
-    $updatedAt.textContent = '';
-    return;
-  }
-  const meta = payload?.meta || {};
-  const total = (typeof meta.total_registros === 'number') ? meta.total_registros : fallbackTotal;
-
-  if (meta.updated_at) {
-    const d = new Date(meta.updated_at);
-    const ok = !isNaN(d.getTime());
-    $updatedAt.textContent = ok
-      ? `Última atualização: ${d.toLocaleString('pt-BR')} • Registros: ${total}`
-      : `Registros: ${total}`;
-  } else {
-    $updatedAt.textContent = `Registros: ${total}`;
-  }
-}
-
 async function load() {
   try {
-    $meta.textContent = 'Carregando…';
-    $list.innerHTML = '';
+    $meta.textContent = 'Atualizando…';
+    $refreshBtn.disabled = true;
 
-    const url = './data.json?v=' + Date.now();
+    // ✅ Puxa direto do RAW (menos cache) + cache bust
+    const url = RAW_DATA_URL_BASE + "?v=" + Date.now();
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error('Falha ao carregar data.json');
 
@@ -300,14 +355,13 @@ async function load() {
 
     renderDays();
     render();
-
     $footer.textContent = `Dica: no celular, toque no endereço para abrir no Waze.`;
   } catch (e) {
     $meta.textContent = 'Erro ao carregar dados.';
     $updatedAt.textContent = '';
-    $list.innerHTML = `<div class="empty">${String(e.message || e)}<br><br>
-    Dica: confirme se <b>data.json</b> está no mesmo diretório do <b>index.html</b>.
-    </div>`;
+    $list.innerHTML = `<div class="empty">${String(e.message || e)}</div>`;
+  } finally {
+    $refreshBtn.disabled = false;
   }
 }
 
@@ -315,30 +369,17 @@ async function load() {
    Eventos (UI -> uiState)
    Aplicação só no OK
 ========================= */
+$q.addEventListener('input', (ev) => { uiState.query = ev.target.value || ''; });
+$q.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
 
-$q.addEventListener('input', (ev) => {
-  uiState.query = ev.target.value || '';
-});
-
-// Enter na busca aplica filtros
-$q.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') applyFilters();
-});
-
-$rota.addEventListener('change', (e) => {
-  uiState.rota = e.target.value;
-});
-
-$ag.addEventListener('change', (e) => {
-  uiState.ag = e.target.value;
-});
+$rota.addEventListener('change', (e) => { uiState.rota = e.target.value; });
+$ag.addEventListener('change', (e) => { uiState.ag = e.target.value; });
 
 $periodo.addEventListener('click', (e) => {
   const btn = e.target.closest('.toggle-btn');
   if (!btn) return;
   uiState.periodo = btn.dataset.p;
 
-  // marca ativo visualmente (mesmo antes de aplicar)
   [...$periodo.querySelectorAll('.toggle-btn')].forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 });
@@ -349,10 +390,6 @@ function applyFilters(){
 }
 
 $applyBtn.addEventListener('click', applyFilters);
-
-// Recarrega o JSON e mantém filtros aplicados
-$refreshBtn.addEventListener('click', async () => {
-  await load();
-});
+$refreshBtn.addEventListener('click', async () => { await load(); });
 
 load();
