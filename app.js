@@ -11,7 +11,6 @@ const DAYS = [
 let data = [];
 let activeDay = guessTodayKey();
 
-// UI state
 let uiState = { rota: 'TODAS', ag: 'TODOS', periodo: 'AMBOS', query: '' };
 let appliedState = { ...uiState };
 
@@ -68,38 +67,67 @@ function excelFractionToHHmm(n){
   return `${hh}:${mm}`;
 }
 
-function toHHmm(v){
-  if (v == null) return '';
-  if (typeof v === 'number') return excelFractionToHHmm(v) || String(v);
+// Extrai 1 ou 2 horários de QUALQUER texto
+// Exemplos aceitos:
+// "08:00-11:30", "08:00 as 11:30", "08:00 às 11:30", "08:00 a 11:30", "08:00 até 11:30"
+function extractTimeRange(raw){
+  if (raw == null) return { start: '', end: '', raw: '' };
 
-  const s = v.toString().trim();
-  if (!s) return '';
+  // número Excel
+  if (typeof raw === 'number') {
+    const hhmm = excelFractionToHHmm(raw);
+    return { start: hhmm, end: '', raw: hhmm };
+  }
 
-  const range = s.match(/(\d{1,2}:\d{2})\s*-\s*(\d{1,2}:\d{2})/);
-  if (range) return `${range[1]}-${range[2]}`;
+  const s = raw.toString().trim();
+  if (!s) return { start: '', end: '', raw: '' };
 
-  const hm = s.match(/^\d{1,2}:\d{2}$/);
-  if (hm) return s;
-
+  // ISO "1899-12-30T13:30:00.000Z"
   if (isISODateString(s)) {
     const m = s.match(/T(\d{2}):(\d{2}):/);
-    if (m) return `${m[1]}:${m[2]}`;
+    const hhmm = m ? `${m[1]}:${m[2]}` : '';
+    return { start: hhmm, end: '', raw: hhmm || s };
   }
-  return s;
+
+  // Pega todos HH:mm do texto
+  const times = [...s.matchAll(/(\d{1,2}):(\d{2})/g)].map(m => {
+    const hh = String(m[1]).padStart(2,'0');
+    const mm = m[2];
+    return `${hh}:${mm}`;
+  });
+
+  if (times.length === 0) return { start: s, end: '', raw: s };
+  if (times.length === 1) return { start: times[0], end: '', raw: s };
+
+  // Se tiver 2+ horários, usa os 2 primeiros (start/end)
+  return { start: times[0], end: times[1], raw: s };
 }
 
 function hasTimeValue(v){
-  const t = toHHmm(v).trim();
-  if (!t) return false;
-  if (t === '0' || t === '00:00') return false;
-  return true;
+  const { start, end, raw } = extractTimeRange(v);
+  const any = (start || end || '').trim();
+  if (!any) return false;
+
+  // evita falsos positivos
+  if (any === '00:00' && !(end && end !== '00:00')) return false;
+
+  // se tiver HH:mm em algum lugar do raw, consideramos válido
+  const hasHHmm = /(\d{1,2}):(\d{2})/.test(String(raw || ''));
+  return hasHHmm || !!any;
+}
+
+function displayRange(v){
+  const { start, end, raw } = extractTimeRange(v);
+  if (start && end) return `${start} às ${end}`;
+  if (start) return `${start}`;
+  // fallback: mostra bruto (se tiver algo)
+  return (raw || '').toString().trim();
 }
 
 function extractFirstTime(v) {
-  const t = toHHmm(v);
-  const m = (t || '').match(/(\d{1,2}):(\d{2})/);
-  if (!m) return 9999;
-  return parseInt(m[1].padStart(2,'0') + m[2], 10);
+  const { start } = extractTimeRange(v);
+  if (!start) return 9999;
+  return parseInt(start.replace(':',''), 10);
 }
 
 function rowStartTime(row) {
@@ -115,6 +143,7 @@ function isAgendado(row) {
 
 function matchesQuery(row, q) {
   if (!q) return true;
+
   const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
   const tarde = getField(row, ['tarde','TARDE','Tarde']);
   const ag = getField(row, ['agendado','AGENDADO','AGENDADO?','Agendado']);
@@ -122,8 +151,9 @@ function matchesQuery(row, q) {
   const hay = normalize([
     row.rota, row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
     row.observacao, row.telefone, row.celular, row.email,
-    manha, tarde, ag
+    String(manha ?? ''), String(tarde ?? ''), String(ag ?? '')
   ].join(' | '));
+
   return hay.includes(q);
 }
 
@@ -176,17 +206,19 @@ function makeTimeBlock(manha, tarde){
   const wrap = document.createElement('div');
   wrap.className = 'times';
 
+  // ✅ Sempre renderiza manhã se existir
   if (hasTimeValue(manha)) {
     const row = document.createElement('div');
     row.className = 'time-row';
-    row.innerHTML = `<span class="time-label">Manhã</span><span class="time-value">${toHHmm(manha).replace('-', ' às ')}</span>`;
+    row.innerHTML = `<span class="time-label">Manhã</span><span class="time-value">${displayRange(manha)}</span>`;
     wrap.appendChild(row);
   }
 
+  // ✅ Sempre renderiza tarde se existir (agora reconhece "as/às/a/até")
   if (hasTimeValue(tarde)) {
     const row = document.createElement('div');
     row.className = 'time-row';
-    row.innerHTML = `<span class="time-label">Tarde</span><span class="time-value">${toHHmm(tarde).replace('-', ' às ')}</span>`;
+    row.innerHTML = `<span class="time-label">Tarde</span><span class="time-value">${displayRange(tarde)}</span>`;
     wrap.appendChild(row);
   }
 
@@ -210,7 +242,7 @@ function render() {
       return true;
     })
     .filter(r => {
-      // Se AGENDADO, não some por período
+      // agendado não some por período
       if (isAgendado(r)) return true;
 
       const manha = getField(r, ['manha','MANHA','MANHÃ','Manhã','Manha']);
@@ -263,7 +295,6 @@ function render() {
 
     const manha = getField(r, ['manha','MANHA','MANHÃ','Manhã','Manha']);
     const tarde = getField(r, ['tarde','TARDE','Tarde']);
-
     const timeBlock = makeTimeBlock(manha, tarde);
 
     const pills = document.createElement('div');
