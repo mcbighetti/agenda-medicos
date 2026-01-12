@@ -1,3 +1,4 @@
+// app.js — versão robusta + filtros corretos + ordem alfabética
 const RAW_DATA_URL_BASE = "https://raw.githubusercontent.com/mcbighetti/agenda-medicos/main/data.json";
 
 const DAYS = [
@@ -11,9 +12,12 @@ const DAYS = [
 let data = [];
 let activeDay = guessTodayKey();
 
+// UI state (o que você mexe)
 let uiState = { rota: 'TODAS', ag: 'TODOS', periodo: 'AMBOS', query: '' };
+// Estado aplicado (só muda quando clica OK)
 let appliedState = { ...uiState };
 
+// elementos (podem ser null — vamos proteger)
 const $days = document.getElementById('days');
 const $list = document.getElementById('list');
 const $meta = document.getElementById('meta');
@@ -68,12 +72,9 @@ function excelFractionToHHmm(n){
 }
 
 // Extrai 1 ou 2 horários de QUALQUER texto
-// Exemplos aceitos:
-// "08:00-11:30", "08:00 as 11:30", "08:00 às 11:30", "08:00 a 11:30", "08:00 até 11:30"
 function extractTimeRange(raw){
   if (raw == null) return { start: '', end: '', raw: '' };
 
-  // número Excel
   if (typeof raw === 'number') {
     const hhmm = excelFractionToHHmm(raw);
     return { start: hhmm, end: '', raw: hhmm };
@@ -82,58 +83,36 @@ function extractTimeRange(raw){
   const s = raw.toString().trim();
   if (!s) return { start: '', end: '', raw: '' };
 
-  // ISO "1899-12-30T13:30:00.000Z"
   if (isISODateString(s)) {
     const m = s.match(/T(\d{2}):(\d{2}):/);
     const hhmm = m ? `${m[1]}:${m[2]}` : '';
     return { start: hhmm, end: '', raw: hhmm || s };
   }
 
-  // Pega todos HH:mm do texto
   const times = [...s.matchAll(/(\d{1,2}):(\d{2})/g)].map(m => {
     const hh = String(m[1]).padStart(2,'0');
     const mm = m[2];
     return `${hh}:${mm}`;
   });
 
-  if (times.length === 0) return { start: s, end: '', raw: s };
+  if (times.length === 0) return { start: '', end: '', raw: s };
   if (times.length === 1) return { start: times[0], end: '', raw: s };
 
-  // Se tiver 2+ horários, usa os 2 primeiros (start/end)
   return { start: times[0], end: times[1], raw: s };
 }
 
 function hasTimeValue(v){
   const { start, end, raw } = extractTimeRange(v);
-  const any = (start || end || '').trim();
-  if (!any) return false;
-
-  // evita falsos positivos
-  if (any === '00:00' && !(end && end !== '00:00')) return false;
-
-  // se tiver HH:mm em algum lugar do raw, consideramos válido
-  const hasHHmm = /(\d{1,2}):(\d{2})/.test(String(raw || ''));
-  return hasHHmm || !!any;
+  if ((start || end || '').trim()) return true;
+  return /(\d{1,2}):(\d{2})/.test(String(raw || ''));
 }
 
 function displayRange(v){
   const { start, end, raw } = extractTimeRange(v);
   if (start && end) return `${start} às ${end}`;
   if (start) return `${start}`;
-  // fallback: mostra bruto (se tiver algo)
-  return (raw || '').toString().trim();
-}
-
-function extractFirstTime(v) {
-  const { start } = extractTimeRange(v);
-  if (!start) return 9999;
-  return parseInt(start.replace(':',''), 10);
-}
-
-function rowStartTime(row) {
-  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
-  const tarde = getField(row, ['tarde','TARDE','Tarde']);
-  return Math.min(extractFirstTime(manha), extractFirstTime(tarde));
+  const t = (raw || '').toString().trim();
+  return t;
 }
 
 function isAgendado(row) {
@@ -168,7 +147,9 @@ function buildWazeLink(row) {
 }
 
 function renderDays() {
+  if (!$days) return;
   $days.innerHTML = '';
+
   DAYS.forEach(d => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -184,6 +165,8 @@ function renderDays() {
 }
 
 function setUpdatedAtText(payload, fallbackTotal) {
+  if (!$updatedAt) return;
+
   if (Array.isArray(payload)) {
     $updatedAt.textContent = `Registros: ${fallbackTotal}`;
     return;
@@ -206,7 +189,6 @@ function makeTimeBlock(manha, tarde){
   const wrap = document.createElement('div');
   wrap.className = 'times';
 
-  // ✅ Sempre renderiza manhã se existir
   if (hasTimeValue(manha)) {
     const row = document.createElement('div');
     row.className = 'time-row';
@@ -214,7 +196,6 @@ function makeTimeBlock(manha, tarde){
     wrap.appendChild(row);
   }
 
-  // ✅ Sempre renderiza tarde se existir (agora reconhece "as/às/a/até")
   if (hasTimeValue(tarde)) {
     const row = document.createElement('div');
     row.className = 'time-row';
@@ -225,7 +206,29 @@ function makeTimeBlock(manha, tarde){
   return wrap;
 }
 
+/**
+ * ✅ Regra de período (como você pediu):
+ * - MANHA: só quem tem horário de manhã naquele dia
+ * - TARDE: só quem tem horário de tarde naquele dia
+ * - AMBOS: quem tem manhã OU tarde
+ *
+ * Importante: AGENDADO NÃO "fura" essa regra.
+ */
+function matchPeriodo(row, periodo){
+  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
+  const tarde = getField(row, ['tarde','TARDE','Tarde']);
+
+  const hasM = hasTimeValue(manha);
+  const hasT = hasTimeValue(tarde);
+
+  if (periodo === 'MANHA') return hasM;
+  if (periodo === 'TARDE') return hasT;
+  return (hasM || hasT); // AMBOS
+}
+
 function render() {
+  if (!$list || !$meta) return;
+
   const q = normalize(appliedState.query);
   const rota = appliedState.rota;
   const agFilter = appliedState.ag;
@@ -241,19 +244,10 @@ function render() {
       if (agFilter === 'N') return v === 'N' || v === '';
       return true;
     })
-    .filter(r => {
-      // agendado não some por período
-      if (isAgendado(r)) return true;
-
-      const manha = getField(r, ['manha','MANHA','MANHÃ','Manhã','Manha']);
-      const tarde = getField(r, ['tarde','TARDE','Tarde']);
-
-      if (periodo === 'MANHA') return hasTimeValue(manha);
-      if (periodo === 'TARDE') return hasTimeValue(tarde);
-      return true;
-    })
+    .filter(r => matchPeriodo(r, periodo))
     .filter(r => matchesQuery(r, q))
-    .sort((a,b) => rowStartTime(a) - rowStartTime(b));
+    // ✅ ordem alfabética
+    .sort((a,b) => (a.medico_nome || '').localeCompare((b.medico_nome || ''), 'pt-BR', { sensitivity: 'base' }));
 
   $meta.textContent = `${filtered.length} atendimento(s) em ${activeDay} • Total de registros: ${data.length}`;
   $list.innerHTML = '';
@@ -346,8 +340,8 @@ function render() {
 
 async function load() {
   try {
-    $meta.textContent = 'Atualizando…';
-    $refreshBtn.disabled = true;
+    if ($meta) $meta.textContent = 'Carregando…';
+    if ($refreshBtn) $refreshBtn.disabled = true;
 
     const url = RAW_DATA_URL_BASE + "?v=" + Date.now();
     const res = await fetch(url, { cache: 'no-store' });
@@ -365,36 +359,45 @@ async function load() {
 
     renderDays();
     render();
-    $footer.textContent = `Dica: no celular, toque no endereço para abrir no Waze.`;
+
+    if ($footer) $footer.textContent = `Dica: no celular, toque no endereço para abrir no Waze.`;
   } catch (e) {
-    $meta.textContent = 'Erro ao carregar dados.';
-    $updatedAt.textContent = '';
-    $list.innerHTML = `<div class="empty">${String(e.message || e)}</div>`;
+    if ($meta) $meta.textContent = 'Erro ao carregar dados.';
+    if ($updatedAt) $updatedAt.textContent = '';
+    if ($list) $list.innerHTML = `<div class="empty">${String(e.message || e)}<br><br>
+      Se travar em "Carregando…", abra o console (F12) e veja o erro. Normalmente é ID faltando no index.html.
+    </div>`;
+    // log para diagnóstico
+    console.error(e);
   } finally {
-    $refreshBtn.disabled = false;
+    if ($refreshBtn) $refreshBtn.disabled = false;
   }
 }
 
-/* Eventos */
-$q.addEventListener('input', (ev) => { uiState.query = ev.target.value || ''; });
-$q.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
-$rota.addEventListener('change', (e) => { uiState.rota = e.target.value; });
-$ag.addEventListener('change', (e) => { uiState.ag = e.target.value; });
+/* Eventos (com proteção null) */
+if ($q) {
+  $q.addEventListener('input', (ev) => { uiState.query = ev.target.value || ''; });
+  $q.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
+}
+if ($rota) $rota.addEventListener('change', (e) => { uiState.rota = e.target.value; });
+if ($ag) $ag.addEventListener('change', (e) => { uiState.ag = e.target.value; });
 
-$periodo.addEventListener('click', (e) => {
-  const btn = e.target.closest('.toggle-btn');
-  if (!btn) return;
-  uiState.periodo = btn.dataset.p;
-  [...$periodo.querySelectorAll('.toggle-btn')].forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-});
+if ($periodo) {
+  $periodo.addEventListener('click', (e) => {
+    const btn = e.target.closest('.toggle-btn');
+    if (!btn) return;
+    uiState.periodo = btn.dataset.p;
+    [...$periodo.querySelectorAll('.toggle-btn')].forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+}
 
 function applyFilters(){
   appliedState = { ...uiState };
   render();
 }
 
-$applyBtn.addEventListener('click', applyFilters);
-$refreshBtn.addEventListener('click', async () => { await load(); });
+if ($applyBtn) $applyBtn.addEventListener('click', applyFilters);
+if ($refreshBtn) $refreshBtn.addEventListener('click', async () => { await load(); });
 
 load();
