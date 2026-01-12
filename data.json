@@ -1,10 +1,12 @@
 {
   "meta": {
-    "updated_at": "2026-01-12T14:09:19.080Z",
-    "total_registros": 612
+    "updated_at": "2026-01-12T14:09:59.950Z",
+    "total_registros": 656
   },
   "registros": [
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ADRIANA RIOS VALVANO",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -20,6 +22,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ADRIANA RIOS VALVANO",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -35,6 +39,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ADRIANO BARROS FONSECA",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -50,6 +56,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ADRIANO BARROS FONSECA",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -65,6 +73,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ADRIANO MOLINARI (MILENA)",
       "especialidade": "GAS",
       "cidade": "",
@@ -80,6 +90,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALCEU DE LEMOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -95,6 +107,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALCEU DE LEMOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -110,6 +124,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALCEU DE LEMOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -125,6 +141,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALCEU DE LEMOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -140,6 +158,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALCEU DE LEMOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -155,6 +175,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALEX LOMBARDI BARBOSA FERRAZ",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -170,6 +192,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALEX LOMBARDI BARBOSA FERRAZ",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -185,6 +209,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALEX LOMBARDI BARBOSA FERRAZ",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -200,6 +226,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALEX LOMBARDI BARBOSA FERRAZ",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -215,6 +243,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALEX LOMBARDI BARBOSA FERRAZ",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -230,6 +260,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEX TADEU FOZ LUCHIARI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -245,6 +277,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDER ALEXANDRINO ALEIXO DA CUNHA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -260,6 +294,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDER ALEXANDRINO ALEIXO DA CUNHA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -275,6 +311,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDER ALEXANDRINO ALEIXO DA CUNHA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -290,6 +328,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDER ALEXANDRINO ALEIXO DA CUNHA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -305,6 +345,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDER ALEXANDRINO ALEIXO DA CUNHA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -320,6 +362,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE CHIMELLO CARVALHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -335,6 +379,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE CHIMELLO CARVALHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -350,6 +396,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE CHIMELLO CARVALHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -365,6 +413,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE ORESTES FERREIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -380,6 +430,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE ORESTES FERREIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -395,6 +447,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE OSTROVSKY DE REZENDE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -410,6 +464,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE OSTROVSKY DE REZENDE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -425,6 +481,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE OSTROVSKY DE REZENDE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -440,6 +498,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ALEXANDRE PAULINO DA COSTA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -455,6 +515,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALINE BOTECHIA",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -470,6 +532,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALINE BOTECHIA",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -485,6 +549,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALINE BOTECHIA",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -500,6 +566,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALINE BOTECHIA",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -515,6 +583,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ALINE BOTECHIA",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -530,6 +600,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "AMADEU CARVALHO JUNIOR",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -545,6 +617,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "AMADEU CARVALHO JUNIOR",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -560,6 +634,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "AMADEU CARVALHO JUNIOR",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -575,6 +651,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "AMADEU CARVALHO JUNIOR",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -590,6 +668,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "AMERICO FERRAZ DE OLIVEIRA JUNIOR",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -605,6 +685,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANA CAROLINA KRAEMER",
       "especialidade": "PSQ",
       "cidade": "",
@@ -620,6 +702,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANA CLARA GOMES FREITAS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -635,6 +719,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANA CLARA GOMES FREITAS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -650,6 +736,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANA LUIZA BECKER GERALDI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -665,6 +753,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANA MARIA GNACCARINI RIBEIRO LOBO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -680,6 +770,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANA MARIA GNACCARINI RIBEIRO LOBO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -695,6 +787,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANA MARIA GNACCARINI RIBEIRO LOBO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -710,6 +804,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANA PAULA BECHARA MARQUEZINI GAZOLLA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -725,6 +821,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANA PAULA BECHARA MARQUEZINI GAZOLLA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -740,6 +838,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANA PAULA BECHARA MARQUEZINI GAZOLLA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -755,6 +855,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANA PAULA BECHARA MARQUEZINI GAZOLLA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -770,6 +872,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANA PAULA BECHARA MARQUEZINI GAZOLLA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -785,6 +889,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDRE SERAFIN GALLINA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -800,6 +906,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDRE SERAFIN GALLINA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -815,6 +923,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDRE SERAFIN GALLINA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -830,6 +940,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDRE SPOTO ANGELI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -845,6 +957,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDRE SPOTO ANGELI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -860,6 +974,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDREA ALVES PEREIRA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -875,6 +991,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDREA ALVES PEREIRA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -890,6 +1008,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDREA ANGELI KALAF MUSSI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -905,6 +1025,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDREA SENNA PESSOTO SERAFIN GALLINA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -920,6 +1042,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDREA SENNA PESSOTO SERAFIN GALLINA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -935,6 +1059,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDREA SENNA PESSOTO SERAFIN GALLINA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -950,6 +1076,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANDRESSA MAGDA PASSOS",
       "especialidade": "ORT",
       "cidade": "",
@@ -965,6 +1093,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANNA CLAUDIA VIEIRA E SILVA GILBERTONI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -980,6 +1110,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANNA CLAUDIA VIEIRA E SILVA GILBERTONI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -995,6 +1127,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANNA CLAUDIA VIEIRA E SILVA GILBERTONI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -1010,6 +1144,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANNA CLAUDIA VIEIRA E SILVA GILBERTONI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -1025,6 +1161,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANNA CLAUDIA VIEIRA E SILVA GILBERTONI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -1040,6 +1178,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANNA PAULA FREITAS LEMES",
       "especialidade": "GOB",
       "cidade": "",
@@ -1055,6 +1195,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANNA PAULA FREITAS LEMES",
       "especialidade": "GOB",
       "cidade": "",
@@ -1070,6 +1212,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANNA PAULA FREITAS LEMES",
       "especialidade": "GOB",
       "cidade": "",
@@ -1085,6 +1229,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANNA PAULA FREITAS LEMES",
       "especialidade": "GOB",
       "cidade": "",
@@ -1100,6 +1246,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ANNA PAULA FREITAS LEMES",
       "especialidade": "GOB",
       "cidade": "",
@@ -1115,6 +1263,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO AMAURI GROPPO",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -1130,6 +1280,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO FERNANDO CAPUCCI OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1145,6 +1297,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO FERNANDO CAPUCCI OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1160,6 +1314,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO FERNANDO CAPUCCI OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1175,6 +1331,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO FERNANDO CAPUCCI OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1190,6 +1348,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO FERNANDO CAPUCCI OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1205,6 +1365,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO HENRIQUE MESCOLLOTI CELLA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -1220,6 +1382,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO HENRIQUE MESCOLLOTI CELLA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -1235,6 +1399,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO HENRIQUE MESCOLLOTI CELLA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -1250,6 +1416,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO HENRIQUE MESCOLLOTI CELLA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -1265,6 +1433,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO JOSE DE MORAES OLIVETTI",
       "especialidade": "ORL",
       "cidade": "",
@@ -1280,6 +1450,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO JOSE PADUA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -1295,6 +1467,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO JOSE PADUA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -1310,6 +1484,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO JOSE PADUA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -1325,6 +1501,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO JOSE PADUA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -1340,6 +1518,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO JOSE PADUA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -1355,6 +1535,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO MARCOS DO NASCIMENTO ALMEIDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1370,6 +1552,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ANTONIO MARCOS DO NASCIMENTO ALMEIDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1385,6 +1569,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "APARECIDA DE FATIMA BONI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -1400,6 +1586,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "APARECIDA DE FATIMA BONI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -1415,6 +1603,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "APARECIDA DE FATIMA BONI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -1430,6 +1620,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "APARECIDA DE FATIMA BONI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -1445,6 +1637,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "APARECIDA DE FATIMA BONI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -1460,6 +1654,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ARIOVALDO MARQUES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1475,6 +1671,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ARIOVALDO MARQUES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1490,6 +1688,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ARIOVALDO MARQUES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1505,6 +1705,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ARIOVALDO MARQUES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1520,6 +1722,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ARTHUR SILVA MATTOS CARDOSO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -1535,6 +1739,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ARTHUR SILVA MATTOS CARDOSO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -1550,6 +1756,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ARTHUR SILVA MATTOS CARDOSO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -1565,6 +1773,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ARTHUR SILVA MATTOS CARDOSO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -1580,6 +1790,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ARTHUR SILVA MATTOS CARDOSO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -1595,6 +1807,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BEATRIZ NEGRETTI GUIRADO FALLEIROS",
       "especialidade": "RMT",
       "cidade": "PIRACICABA",
@@ -1610,6 +1824,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BEATRIZ NEGRETTI GUIRADO FALLEIROS",
       "especialidade": "RMT",
       "cidade": "PIRACICABA",
@@ -1625,6 +1841,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BEATRIZ NEGRETTI GUIRADO FALLEIROS",
       "especialidade": "RMT",
       "cidade": "PIRACICABA",
@@ -1640,6 +1858,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BEATRIZ NEGRETTI GUIRADO FALLEIROS",
       "especialidade": "RMT",
       "cidade": "PIRACICABA",
@@ -1655,6 +1875,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA GAGLIARDI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1670,6 +1892,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA RIBEIRO GOMES OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1685,6 +1909,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA RIBEIRO GOMES OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1700,6 +1926,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA RIBEIRO GOMES OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1715,6 +1943,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA RIBEIRO GOMES OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1730,6 +1960,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA RIBEIRO GOMES OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1745,6 +1977,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNA ROSSI",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -1760,6 +1994,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNO JOSE TEIXEIRA SACKSIDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1775,6 +2011,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNO JOSE TEIXEIRA SACKSIDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1790,6 +2028,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "BRUNO JOSE TEIXEIRA SACKSIDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1805,6 +2045,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA ALMEIDA DO AMARAL KRUZICH",
       "especialidade": "ONC",
       "cidade": "PIRACICABA",
@@ -1820,6 +2062,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA ALMEIDA DO AMARAL KRUZICH",
       "especialidade": "ONC",
       "cidade": "PIRACICABA",
@@ -1835,6 +2079,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA TROCOLLI NAPOLITANO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1850,6 +2096,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA TROCOLLI NAPOLITANO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1865,6 +2113,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA TROCOLLI NAPOLITANO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1880,6 +2130,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA TROCOLLI NAPOLITANO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1895,6 +2147,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CAMILA TROCOLLI NAPOLITANO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1910,6 +2164,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CARLOS AUGUSTO GIMAEL",
       "especialidade": "INF",
       "cidade": "",
@@ -1925,6 +2181,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CARLOS FREDERICO PASCALE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1940,6 +2198,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CARLOS FREDERICO PASCALE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1955,6 +2215,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CARLOS FREDERICO PASCALE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1970,6 +2232,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CARLOS FREDERICO PASCALE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -1985,6 +2249,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CARLOS HENRIQUE RODRIGUES KRUZICH",
       "especialidade": "ONC",
       "cidade": "PIRACICABA",
@@ -2000,6 +2266,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "CARLOS HENRIQUE RODRIGUES KRUZICH",
       "especialidade": "ONC",
       "cidade": "PIRACICABA",
@@ -2015,6 +2283,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CAROLINA ANTONIALLI MOLINA",
       "especialidade": "",
       "cidade": "",
@@ -2030,6 +2300,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CELIO FORTES GOMES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2045,6 +2317,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CELIO FORTES GOMES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2060,6 +2334,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CELIO FORTES GOMES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2075,6 +2351,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CELISE ALESSANDRA SOBRAL DENARDI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2090,6 +2368,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "CLAYTON RISOLA",
       "especialidade": "ORT",
       "cidade": "",
@@ -2105,6 +2385,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIEL CANTARELLI DOS SANTOS",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -2120,6 +2402,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIEL CANTARELLI DOS SANTOS",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -2135,6 +2419,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "DANIEL GIACOIA",
       "especialidade": "ORT",
       "cidade": "",
@@ -2150,6 +2436,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "DANIEL GIACOIA",
       "especialidade": "ORT",
       "cidade": "",
@@ -2165,6 +2453,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIEL VALIM DE SOUZA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2180,6 +2470,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIEL VALIM DE SOUZA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2195,6 +2487,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIELA ANGELI SPINETTI SIBILA Sp71371",
       "especialidade": "END",
       "cidade": "",
@@ -2210,6 +2504,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIELA ANGELI SPINETTI SIBILA Sp71371",
       "especialidade": "END",
       "cidade": "",
@@ -2225,6 +2521,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIELA ANGELI SPINETTI SIBILA Sp71371",
       "especialidade": "END",
       "cidade": "",
@@ -2240,6 +2538,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIELA ANGELI SPINETTI SIBILA Sp71371",
       "especialidade": "END",
       "cidade": "",
@@ -2255,6 +2555,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIELA ANGELI SPINETTI SIBILA Sp71371",
       "especialidade": "END",
       "cidade": "",
@@ -2270,6 +2572,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "DANIELA VITAL",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -2285,6 +2589,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DANIELLE FARIA MIGUEL",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -2300,6 +2606,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DAVI KLAVA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -2315,6 +2623,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DAVI KLAVA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -2330,6 +2640,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "DEBORA CRISTINA BALDACIN HONG",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2345,6 +2657,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "DEBORA CRISTINA BALDACIN HONG",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2360,6 +2674,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DIMAS DOS SANTOS ROCHA",
       "especialidade": "CLG",
       "cidade": "",
@@ -2375,6 +2691,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DIMAS ROCHA",
       "especialidade": "CLG",
       "cidade": "",
@@ -2390,6 +2708,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "DINARK CONCEICAO VIANA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -2405,6 +2725,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DIOGENES BONISSON VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2420,6 +2742,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DIOGENES BONISSON VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2435,6 +2759,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DORIVALDO CUSTODIO BARBOSA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2450,6 +2776,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DORIVALDO CUSTODIO BARBOSA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2465,6 +2793,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DORIVALDO CUSTODIO BARBOSA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2480,6 +2810,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DORIVALDO CUSTODIO BARBOSA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2495,6 +2827,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "DORIVALDO CUSTODIO BARBOSA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2510,6 +2844,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EDSON LUIS DE CAMPOS BICUDO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2525,6 +2861,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EDSON LUIS DE CAMPOS BICUDO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2540,6 +2878,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EDUARDO DEMETRIO MINNITI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2555,6 +2895,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EDUARDO LUCIO NICOLELA JUNIOR",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2570,6 +2912,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EDUARDO LUCIO NICOLELA JUNIOR",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2585,6 +2929,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EDUARDO LUCIO NICOLELA JUNIOR",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2600,6 +2946,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EGLYS REYES ALVAREZ",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2615,6 +2963,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EGLYS REYES ALVAREZ",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2630,6 +2980,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EGLYS REYES ALVAREZ",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2645,6 +2997,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EGLYS REYES ALVAREZ",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2660,6 +3014,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EGLYS REYES ALVAREZ",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2675,6 +3031,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ELENICE TANIA DE ANDRADE VEIGA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2690,6 +3048,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ELENICE TANIA DE ANDRADE VEIGA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2705,6 +3065,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ELENICE TANIA DE ANDRADE VEIGA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2720,6 +3082,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ELOY SIMOES JUNIOR",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -2735,6 +3099,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ELOY SIMOES JUNIOR",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -2750,6 +3116,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EMILIANO SA FORTES DE ARAUJO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2765,6 +3133,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ESTELA MARIA FERRAZ DOS SANTOS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2780,6 +3150,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ESTELA MARIA FERRAZ DOS SANTOS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -2795,6 +3167,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ETELVINO LUIZ GARCIA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -2810,6 +3184,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ETELVINO LUIZ GARCIA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -2825,6 +3201,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EVANDRO ADRIANI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2840,6 +3218,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EVANDRO ADRIANI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2855,6 +3235,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EVANDRO ADRIANI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2870,6 +3252,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EVANDRO ADRIANI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2885,6 +3269,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "EVANDRO ADRIANI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -2900,6 +3286,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO AUGUSTO SUZUKI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2915,6 +3303,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO AUGUSTO SUZUKI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2930,6 +3320,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO AUGUSTO SUZUKI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2945,6 +3337,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO AUGUSTO SUZUKI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2960,6 +3354,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO AUGUSTO SUZUKI",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -2975,6 +3371,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO CARDOSO CHIARELI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -2990,6 +3388,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO CARDOSO CHIARELI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -3005,6 +3405,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO CARDOSO CHIARELI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -3020,6 +3422,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FABIO WATANABE",
       "especialidade": "URO",
       "cidade": "",
@@ -3035,6 +3439,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FELIPE ALVES VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3050,6 +3456,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FELIPE ALVES VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3065,6 +3473,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FELIPE ALVES VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3080,6 +3490,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FERNANDA BONIN ANTONIO",
       "especialidade": "GEN",
       "cidade": "PIRACICABA",
@@ -3095,6 +3507,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FERNANDA BONIN ANTONIO",
       "especialidade": "GEN",
       "cidade": "PIRACICABA",
@@ -3110,6 +3524,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FERNANDA BONIN ANTONIO",
       "especialidade": "GEN",
       "cidade": "PIRACICABA",
@@ -3125,6 +3541,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FERNANDA BONIN ANTONIO",
       "especialidade": "GEN",
       "cidade": "PIRACICABA",
@@ -3140,6 +3558,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FERNANDA BONIN ANTONIO",
       "especialidade": "GEN",
       "cidade": "PIRACICABA",
@@ -3155,6 +3575,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FERNANDA RIOS VALVANO",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3170,6 +3592,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FILIPE SOARES VIDAL",
       "especialidade": "CLG",
       "cidade": "",
@@ -3185,6 +3609,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FLAVIA ANDREA SANTOS MARANHA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -3200,6 +3626,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FLAVIO GIARDIELLO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3215,6 +3643,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BARCELOS JUNIOR",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3230,6 +3660,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BARCELOS JUNIOR",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3245,6 +3677,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BURANELI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3260,6 +3694,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BURANELI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3275,6 +3711,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BURANELI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3290,6 +3728,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BURANELI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3305,6 +3745,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO BURANELI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3320,6 +3762,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO PETITO VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3335,6 +3779,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO PETITO VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3350,6 +3796,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO PETITO VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3365,6 +3813,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO PETITO VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3380,6 +3830,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO PETITO VIEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3395,6 +3847,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO VITOR BEDUSQUI ORSI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -3410,6 +3864,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO VITOR BEDUSQUI ORSI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -3425,6 +3881,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRANCISCO VITOR BEDUSQUI ORSI",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -3440,6 +3898,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "FRED SCHINAIDER CERQUEIRA",
       "especialidade": "ORT",
       "cidade": "",
@@ -3455,6 +3915,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GABRIEL CUELLAR OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3470,6 +3932,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GABRIEL CUELLAR OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3485,6 +3949,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GABRIELA CORREA MANO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3500,6 +3966,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GERALDO JOSE FELIPE",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3515,6 +3983,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GERALDO JOSE FELIPE",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3530,6 +4000,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GERALDO JOSE FELIPE",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3545,6 +4017,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GERRITA DE CASSIA NOGUEIRA FIGUEIRA",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -3560,6 +4034,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GILBERTO HENRIQUES NETTO",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3575,6 +4051,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GILBERTO HENRIQUES NETTO",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3590,6 +4068,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GILBERTO PETTAN",
       "especialidade": "GOB",
       "cidade": "",
@@ -3605,6 +4085,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GILBERTO STEIN AGUIAR SP42585",
       "especialidade": "PNE",
       "cidade": "",
@@ -3620,6 +4102,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GISELA MUNHOZ BAPTISTINI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3635,6 +4119,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GISELA MUNHOZ BAPTISTINI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3650,6 +4136,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GISELA MUNHOZ BAPTISTINI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3665,6 +4153,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUACYRA CLAUDIA CAPANO MENDES",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3680,6 +4170,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUILBERT ERNESTO DE FREITAS NOBRE",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3695,6 +4187,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUILBERT ERNESTO DE FREITAS NOBRE",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -3710,6 +4204,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUILHERME MANDU FERRAZ DE ARRUDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3725,6 +4221,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUILHERME MANDU FERRAZ DE ARRUDA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3740,6 +4238,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO BADINO KRAHEMBUHL",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -3755,6 +4255,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO CORRER",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -3770,6 +4272,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO DE MENDONÇA BORGES",
       "especialidade": "URO",
       "cidade": "",
@@ -3785,6 +4289,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO DE MENDONÇA BORGES",
       "especialidade": "URO",
       "cidade": "",
@@ -3800,6 +4306,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO DE MENDONÇA BORGES",
       "especialidade": "URO",
       "cidade": "",
@@ -3815,6 +4323,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO DE MENDONÇA BORGES",
       "especialidade": "URO",
       "cidade": "",
@@ -3830,6 +4340,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO DE MENDONÇA BORGES",
       "especialidade": "URO",
       "cidade": "",
@@ -3845,6 +4357,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "GUSTAVO EBERT",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -3860,6 +4374,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "GUSTAVO EBERT",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -3875,6 +4391,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO MARTINS DE MATTOS",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -3890,6 +4408,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO MARTINS DE MATTOS",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -3905,6 +4425,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO MARTINS DE MATTOS",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -3920,6 +4442,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "GUSTAVO PAGANINI DAVID 236301",
       "especialidade": "",
       "cidade": "",
@@ -3935,6 +4459,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HELLADIO DO AMARAL MELLO FILHO",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -3950,6 +4476,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HENRIQUE CESTA",
       "especialidade": "CIR",
       "cidade": "PIRACICABA",
@@ -3965,6 +4493,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HENRIQUE FERNANDEZ MENDES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -3980,6 +4510,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HENRIQUE FERNANDEZ MENDES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -3995,6 +4527,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HENRIQUE FERNANDEZ MENDES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -4010,6 +4544,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HENRIQUE FERNANDEZ MENDES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -4025,6 +4561,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HENRIQUE FERNANDEZ MENDES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -4040,6 +4578,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HUMBERTO MAGNO PASSOS SP73689",
       "especialidade": "CRD",
       "cidade": "",
@@ -4055,6 +4595,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HUMBERTO MAGNO PASSOS SP73689",
       "especialidade": "CRD",
       "cidade": "",
@@ -4070,6 +4612,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "HUMBERTO MAGNO PASSOS SP73689",
       "especialidade": "CRD",
       "cidade": "",
@@ -4085,6 +4629,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IGOR ALMONFREY DA SILVA SP141337",
       "especialidade": "",
       "cidade": "PIRACICABA",
@@ -4100,6 +4646,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "INAH NOGUEIRA JUNGER",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4115,6 +4663,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "INAH NOGUEIRA JUNGER",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4130,6 +4680,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "INAH NOGUEIRA JUNGER",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4145,6 +4697,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "INAH NOGUEIRA JUNGER",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4160,6 +4714,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "INAH NOGUEIRA JUNGER",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4175,6 +4731,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ISABELA PEIXOTO OLIVETTI PONTIN",
       "especialidade": "ORL",
       "cidade": "",
@@ -4190,6 +4748,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN ARBEX",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4205,6 +4765,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN ARBEX",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4220,6 +4782,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN ARBEX",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4235,6 +4799,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN ARBEX",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4250,6 +4816,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN ARBEX",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4265,6 +4833,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN JOSE MARMO DE ALMEIDA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -4280,6 +4850,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN MOREIRA DA SILVA JUNIOR",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4295,6 +4867,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN MOREIRA DA SILVA JUNIOR",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4310,6 +4884,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN MOREIRA DA SILVA JUNIOR",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4325,6 +4901,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN MOREIRA DA SILVA JUNIOR",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4340,6 +4918,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "IVAN MOREIRA DA SILVA JUNIOR",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -4355,6 +4935,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JANAINA CANELLA MARTINS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4370,6 +4952,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JANAINA CANELLA MARTINS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4385,6 +4969,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JANAINA CANELLA MARTINS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4400,6 +4986,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JANAINA CANELLA MARTINS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4415,6 +5003,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "JANAINA DE CASTRO EBERT",
       "especialidade": "END",
       "cidade": "",
@@ -4430,6 +5020,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JEFERSON FEREIRA 182810",
       "especialidade": "ORT",
       "cidade": "",
@@ -4445,6 +5037,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JEFERSON FEREIRA 182810",
       "especialidade": "ORT",
       "cidade": "",
@@ -4460,6 +5054,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JEFERSON FEREIRA 182810",
       "especialidade": "ORT",
       "cidade": "",
@@ -4475,6 +5071,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOAO AUGUSTO SCARAZATTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4490,6 +5088,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOAO AUGUSTO SCARAZATTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4505,6 +5105,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOAO SHIGUEO YONEKURA",
       "especialidade": "NEU",
       "cidade": "",
@@ -4520,6 +5122,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOAO SHIGUEO YONEKURA",
       "especialidade": "NEU",
       "cidade": "",
@@ -4535,6 +5139,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JORGE CHALLITA NOUHRA SOBRINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4550,6 +5156,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JORGE CHALLITA NOUHRA SOBRINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4565,6 +5173,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JORGE CHALLITA NOUHRA SOBRINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4580,6 +5190,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JORGE CHALLITA NOUHRA SOBRINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4595,6 +5207,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JORGE CHALLITA NOUHRA SOBRINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4610,6 +5224,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE EDUARDO PASSOS JORGE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4625,6 +5241,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE EDUARDO PASSOS JORGE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4640,6 +5258,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE EDUARDO PASSOS JORGE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4655,6 +5275,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE EDUARDO PASSOS JORGE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4670,6 +5292,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE EDUARDO PASSOS JORGE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4685,6 +5309,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE FERNANDO FANCHIN 22948",
       "especialidade": "GAS",
       "cidade": "PIRACICABA",
@@ -4700,6 +5326,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE FERNANDO FANCHIN 22948",
       "especialidade": "GAS",
       "cidade": "PIRACICABA",
@@ -4715,6 +5343,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MARIA PINTO NETO",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -4730,6 +5360,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MARIA PINTO NETO",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -4745,6 +5377,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MARIA PINTO NETO",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -4760,6 +5394,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MARIA PINTO NETO",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -4775,6 +5411,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MARIA PINTO NETO",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -4790,6 +5428,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MAURICIO HIGASHI DE FREITAS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4805,6 +5445,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MAURICIO HIGASHI DE FREITAS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4820,6 +5462,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MAURICIO HIGASHI DE FREITAS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4835,6 +5479,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE MAURICIO HIGASHI DE FREITAS",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -4850,6 +5496,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSE ROBERTO CANOLA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -4865,6 +5513,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "JOSE ZERAICK NETO",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -4880,6 +5530,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "JOSE ZERAICK NETO",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -4895,6 +5547,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSEMAR DE LIMA ORIANI",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -4910,6 +5564,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JOSEMAR DE LIMA ORIANI",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -4925,6 +5581,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIA CABRAL MARTUSCELLO BEDENDO",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -4940,6 +5598,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIANA DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4955,6 +5615,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIANA DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4970,6 +5632,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIANA DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -4985,6 +5649,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIANA DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5000,6 +5666,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIANA DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5015,6 +5683,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "JULIANA OLIVEIRA JAWAD",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -5030,6 +5700,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "JULIANA OLIVEIRA JAWAD",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -5045,6 +5717,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIO CESAR BARROS AYRES",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -5060,6 +5734,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "JULIO CESAR BARROS AYRES",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -5075,6 +5751,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "JUSSIEU ROBERTO FERNANDES SIQUEIRA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -5090,6 +5768,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LAURA ELENA ROJAS MANCHIN",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5105,6 +5785,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LAURA ELENA ROJAS MANCHIN",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5120,6 +5802,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LAURA ELENA ROJAS MANCHIN",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5135,6 +5819,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LAURA GUIMARAES AZEVEDO TINOCO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5150,6 +5836,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LELIA CALIPSO ACHON DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5165,6 +5853,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LELIA CALIPSO ACHON DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5180,6 +5870,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LELIA CALIPSO ACHON DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5195,6 +5887,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LELIA CALIPSO ACHON DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5210,6 +5904,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LELIA CALIPSO ACHON DE ALBUQUERQUE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5225,6 +5921,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "LEONARDO SANCHES MUNICELLI",
       "especialidade": "RMT",
       "cidade": "PIRACICABA",
@@ -5240,6 +5938,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5255,6 +5955,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5270,6 +5972,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5285,6 +5989,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5300,6 +6006,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5315,6 +6023,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5330,6 +6040,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5345,6 +6057,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5360,6 +6074,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5375,6 +6091,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA CAROLINE PATTINI GAVIOLI",
       "especialidade": "CLG",
       "cidade": "",
@@ -5390,6 +6108,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA DE FRANCESCHINI",
       "especialidade": "CIR",
       "cidade": "PIRACICABA",
@@ -5405,6 +6125,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA DE FRANCESCHINI",
       "especialidade": "CIR",
       "cidade": "PIRACICABA",
@@ -5420,6 +6142,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LETICIA HELENA CASTILHO ABE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5435,6 +6159,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "LIZ COSTA DE SOUSA PIRES",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -5450,6 +6176,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "LIZ COSTA DE SOUSA PIRES",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -5465,6 +6193,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "LIZ COSTA DE SOUSA PIRES",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -5480,6 +6210,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LIZETH ZUNIGA RIBEIRO",
       "especialidade": "CLG",
       "cidade": "",
@@ -5495,6 +6227,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS BARONA DA ROCHA",
       "especialidade": "CLG",
       "cidade": "",
@@ -5510,6 +6244,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS BARONA DA ROCHA",
       "especialidade": "CLG",
       "cidade": "",
@@ -5525,6 +6261,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS FERNANDO INFORCATO ZORZETTO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5540,6 +6278,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS FERNANDO INFORCATO ZORZETTO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5555,6 +6295,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS NAVES DE RESENDE",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -5570,6 +6312,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS VAZ DE LIMA MATTOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -5585,6 +6329,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCAS VAZ DE LIMA MATTOS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -5600,6 +6346,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCIANA ALVES BONFARINI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5615,6 +6363,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCIANA ALVES BONFARINI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5630,6 +6380,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCIANA ALVES BONFARINI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5645,6 +6397,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUCIANA ALVES BONFARINI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5660,6 +6414,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "LUCIANE FURLAN THEODORO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5675,6 +6431,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIS CARLOS CASSEB FILHO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5690,6 +6448,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIS CARLOS CASSEB FILHO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5705,6 +6465,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIS FERNANDO DE CASTRO NEVES MAFFEZOLI",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -5720,6 +6482,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIS FERNANDO DE CASTRO NEVES MAFFEZOLI",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -5735,6 +6499,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ ALBERTO BARBOSA TAVARES",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -5750,6 +6516,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ ALBERTO BARBOSA TAVARES",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -5765,6 +6533,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS FERREIRA DE MORAES",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5780,6 +6550,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS FERREIRA DE MORAES",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5795,6 +6567,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS FERREIRA DE MORAES",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5810,6 +6584,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS FERREIRA DE MORAES",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5825,6 +6601,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS FERREIRA DE MORAES",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -5840,6 +6618,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS GIAVARINA SIQUEIRA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -5855,6 +6635,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS GIAVARINA SIQUEIRA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -5870,6 +6652,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS GIAVARINA SIQUEIRA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -5885,6 +6669,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS GIAVARINA SIQUEIRA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -5900,6 +6686,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CARLOS GIAVARINA SIQUEIRA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -5915,6 +6703,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CELSO ZANOTTO MANFIO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5930,6 +6720,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ CELSO ZANOTTO MANFIO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -5945,6 +6737,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ DIAS DOS REIS",
       "especialidade": "",
       "cidade": "",
@@ -5960,6 +6754,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ FERNANDO COIMBRA",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -5975,6 +6771,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ GONZAGA PACOLA",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -5990,6 +6788,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ GONZAGA PACOLA",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -6005,6 +6805,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ GONZAGA RIBALDO FILHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6020,6 +6822,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ HOMERO PESSOTTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6035,6 +6839,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ HOMERO PESSOTTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6050,6 +6856,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ HOMERO PESSOTTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6065,6 +6873,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ HOMERO PESSOTTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6080,6 +6890,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ ROBERTO PERES FLORES 19 992169297 Silvia",
       "especialidade": "CIR",
       "cidade": "",
@@ -6095,6 +6907,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LUIZ ROBERTO PERES FLORES 19 992169297 Silvia",
       "especialidade": "CIR",
       "cidade": "",
@@ -6110,6 +6924,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LYANDRA MARA ZANATTA NEDER GODOY",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6125,6 +6941,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LYANDRA MARA ZANATTA NEDER GODOY",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6140,6 +6958,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "LYANDRA MARA ZANATTA NEDER GODOY",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6155,6 +6975,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELA CRISTINA APOLINARI CABRINI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6170,6 +6992,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELA MALTA DE LIMA BARRA",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -6185,6 +7009,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO BAUMGARTNER FORTINGUERRA",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -6200,6 +7026,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO BAUMGARTNER FORTINGUERRA",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -6215,6 +7043,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO DE CASTRO NEVES MAFFEZOLI",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -6230,6 +7060,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO DE CASTRO NEVES MAFFEZOLI",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -6245,6 +7077,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO FERREIRA VENTOSA",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -6260,6 +7094,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO MARTINELLI DURANTE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6275,6 +7111,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO MARTINELLI DURANTE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6290,6 +7128,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO MARTINELLI DURANTE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6305,6 +7145,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCELO PARDI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6320,6 +7162,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCIA MOTTA MAIA DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6335,6 +7179,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCIA MOTTA MAIA DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6350,6 +7196,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCIA MOTTA MAIA DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6365,6 +7213,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCIA MOTTA MAIA DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6380,6 +7230,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCIA MOTTA MAIA DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6395,6 +7247,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCO ANTONIO GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6410,6 +7264,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCO ANTONIO GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6425,6 +7281,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCO ANTONIO GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6440,6 +7298,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARCO ANTONIO GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6455,6 +7315,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA CRISTINA DOS SANTOS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6470,6 +7332,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA CRISTINA DOS SANTOS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6485,6 +7349,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA CRISTINA DOS SANTOS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6500,6 +7366,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA CRISTINA DOS SANTOS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6515,6 +7383,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA DA GRAÇA LARA DIAS PIEDADE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6530,6 +7400,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA DA GRAÇA LARA DIAS PIEDADE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6545,6 +7417,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA DA GRAÇA LARA DIAS PIEDADE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6560,6 +7434,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA DA GRAÇA LARA DIAS PIEDADE",
       "especialidade": "GOB",
       "cidade": "",
@@ -6575,6 +7451,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA FERNANDA REIS RIBEIRO",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -6590,6 +7468,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIA FERNANDA REIS RIBEIRO",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -6605,6 +7485,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIANA MARQUES KAIRALLA ANDREAZI",
       "especialidade": "GER",
       "cidade": "",
@@ -6620,6 +7502,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARIANA MARQUES KAIRALLA ANDREAZI",
       "especialidade": "GER",
       "cidade": "",
@@ -6635,6 +7519,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MARILIA PIRES DE SOUSA E SILVA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -6650,6 +7536,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "MATHEUS SIQUEIRA MASSON",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6665,6 +7553,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MICHELLE BASSO COUTO GOUVEA",
       "especialidade": "NEU",
       "cidade": "",
@@ -6680,6 +7570,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MIRIAN ADELINA VIANNA BERNO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6695,6 +7587,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MIRIAN ADELINA VIANNA BERNO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6710,6 +7604,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MIRIAN ADELINA VIANNA BERNO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6725,6 +7621,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MIRIAN ADELINA VIANNA BERNO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6740,6 +7638,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "MIRIAN ADELINA VIANNA BERNO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6755,6 +7655,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NATHALIA AJUDARTE LOPES",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -6770,6 +7672,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NATHALIA AJUDARTE LOPES",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -6785,6 +7689,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NEILOR TEOFILO ARAUJO RABELO",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -6800,6 +7706,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NEILOR TEOFILO ARAUJO RABELO",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -6815,6 +7723,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6830,6 +7740,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6845,6 +7757,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6860,6 +7774,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6875,6 +7791,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6890,6 +7808,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6905,6 +7825,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6920,6 +7842,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO DA SILVA LAVOURA JUNIOR",
       "especialidade": "URO",
       "cidade": "",
@@ -6935,6 +7859,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO HENRIQUE SCHAFFER 23007",
       "especialidade": "GAS",
       "cidade": "PIRACICABA",
@@ -6950,6 +7876,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO HENRIQUE SCHAFFER 23007",
       "especialidade": "GAS",
       "cidade": "PIRACICABA",
@@ -6965,6 +7893,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "NIVALDO HENRIQUE SCHAFFER 23007",
       "especialidade": "GAS",
       "cidade": "PIRACICABA",
@@ -6980,6 +7910,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ODENIR PEREIRA GOMES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -6995,6 +7927,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSMAR RODRIGUES MENDONCA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7010,6 +7944,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSMAR RODRIGUES MENDONCA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7025,6 +7961,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSMAR RODRIGUES MENDONCA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7040,6 +7978,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSMAR RODRIGUES MENDONCA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7055,6 +7995,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSMAR RODRIGUES MENDONCA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7070,6 +8012,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSVALDO BENEDITO RODRIGUES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7085,6 +8029,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSVALDO BENEDITO RODRIGUES",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7100,6 +8046,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSVALDO CARDOSO DE SANTANA FILHO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -7115,6 +8063,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "OSVALDO CARDOSO DE SANTANA FILHO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -7130,6 +8080,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "PATRICIA RELA BRUNO",
       "especialidade": "NEF",
       "cidade": "PIRACICABA",
@@ -7145,6 +8097,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "PATRICIA RELA BRUNO",
       "especialidade": "NEF",
       "cidade": "PIRACICABA",
@@ -7160,6 +8114,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PATRICIA VARGAS AURICHIO MOLLICA",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -7175,6 +8131,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PATRICIA VARGAS AURICHIO MOLLICA",
       "especialidade": "ORL",
       "cidade": "PIRACICABA",
@@ -7190,6 +8148,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULA ARIETA CRIVELLI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7205,6 +8165,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULA ARIETA CRIVELLI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7220,6 +8182,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO ARTHUR MACHADO PADOVANI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -7235,6 +8199,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO OMAR SABA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7250,6 +8216,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO OMAR SABA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7265,6 +8233,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO OMAR SABA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7280,6 +8250,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO OMAR SABA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7295,6 +8267,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO OMAR SABA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7310,6 +8284,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "Paulo pitanga CRD 60555",
       "especialidade": "",
       "cidade": "",
@@ -7325,6 +8301,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "Paulo pitanga CRD 60555",
       "especialidade": "",
       "cidade": "",
@@ -7340,6 +8318,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "Paulo pitanga CRD 60555",
       "especialidade": "",
       "cidade": "",
@@ -7355,6 +8335,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO ROBERTO LARA COELHO",
       "especialidade": "URO",
       "cidade": "",
@@ -7370,6 +8352,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PAULO ROBERTO LARA COELHO",
       "especialidade": "URO",
       "cidade": "",
@@ -7385,6 +8369,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "PEDRO XAVIER FERREIRA FONTES 192391",
       "especialidade": "CRD",
       "cidade": "",
@@ -7400,6 +8386,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAFAEL ALVES DO AMARAL MELLO",
       "especialidade": "CIR",
       "cidade": "PIRACICABA",
@@ -7415,6 +8403,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAFAEL MARMIROLI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7430,6 +8420,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAFAEL MARMIROLI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7445,6 +8437,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAFAEL MARMIROLI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7460,6 +8454,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAFAEL MARMIROLI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7475,6 +8471,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "NN",
       "medico_nome": "RAISSA CARVALHO MARINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7490,6 +8488,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "NN",
       "medico_nome": "RAISSA CARVALHO MARINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7505,6 +8505,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "NN",
       "medico_nome": "RAISSA CARVALHO MARINHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7520,6 +8522,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAIZA",
       "especialidade": "CLG",
       "cidade": "",
@@ -7535,6 +8539,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAQUEL ASENJO BERTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7550,6 +8556,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAQUEL ASENJO BERTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7565,6 +8573,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAQUEL ASENJO BERTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7580,6 +8590,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAQUEL ASENJO BERTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7595,6 +8607,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RAQUEL ASENJO BERTI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7610,6 +8624,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "RAYSSA FABIANA CHAMMA",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -7625,6 +8641,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "REBECCA LUIZA SEBRIAN NUNES",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -7640,6 +8658,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "RENAN SIQUEIRA MARTINS",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -7655,6 +8675,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RENATA PINOTTI GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7670,6 +8692,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RENATA PINOTTI GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7685,6 +8709,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RENATA PINOTTI GARCIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7700,6 +8726,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RICARDO CUNHA APRILANTE",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7715,6 +8743,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RICARDO DE BIASI RIBEIRO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7730,6 +8760,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RICARDO DE BIASI RIBEIRO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7745,6 +8777,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RICARDO DE BIASI RIBEIRO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7760,6 +8794,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RICARDO GREGOLIN NETO",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -7775,6 +8811,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ROBERTA CRISTINA CABRAL MINGRONE",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -7790,6 +8828,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "ROBERTA CRISTINA CABRAL MINGRONE",
       "especialidade": "GER",
       "cidade": "PIRACICABA",
@@ -7805,6 +8845,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROBERTO GALDINO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7820,6 +8862,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RODRIGO DE HELD FALASHI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7835,6 +8879,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RODRIGO DE HELD FALASHI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7850,6 +8896,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RODRIGO DE HELD FALASHI",
       "especialidade": "URO",
       "cidade": "PIRACICABA",
@@ -7865,6 +8913,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RODRIGO DOS SANTOS DIAS",
       "especialidade": "GEN",
       "cidade": "PIRACICABA",
@@ -7880,6 +8930,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RODRIGO ZABAGLIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7895,6 +8947,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RODRIGO ZABAGLIA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7910,6 +8964,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROGERIO CARDOSO DA SILVA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7925,6 +8981,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROGERIO CARDOSO DA SILVA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7940,6 +8998,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROGERIO CARDOSO DA SILVA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -7955,6 +9015,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RONALDO MOSCHINI DA SILVA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -7970,6 +9032,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROSANGELA GARRAFONI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -7985,6 +9049,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROSANGELA GARRAFONI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8000,6 +9066,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROSANGELA GARRAFONI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8015,6 +9083,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROSANGELA GARRAFONI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8030,6 +9100,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ROSANGELA GARRAFONI PESSOTTI",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8045,6 +9117,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RUBEN EDUARDO KRASNIAK",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8060,6 +9134,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "RUBEN EDUARDO KRASNIAK",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8075,6 +9151,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SAMIRA CRISTINA CURY",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8090,6 +9168,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SAMIRA CRISTINA CURY",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8105,6 +9185,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SHARON FABIANE RAICHER",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8120,6 +9202,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SHARON FABIANE RAICHER",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8135,6 +9219,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SHEILA GIMENEZ GIOVANONI",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8150,6 +9236,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVANA MARIA MAGRO KOREN",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8165,6 +9253,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVANA MARIA MAGRO KOREN",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8180,6 +9270,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVANA MARIA MAGRO KOREN",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8195,6 +9287,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVIA CAROLINA CORNEJO DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8210,6 +9304,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVIA CAROLINA CORNEJO DE OLIVEIRA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8225,6 +9321,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVIA CHINELATTO SP70484",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -8240,6 +9338,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SILVIA CHINELATTO SP70484",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -8255,6 +9355,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "SISSI ZILI BERTOLINI",
       "especialidade": "GOB",
       "cidade": "",
@@ -8270,6 +9372,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "SISSI ZILI BERTOLINI",
       "especialidade": "GOB",
       "cidade": "",
@@ -8285,6 +9389,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "SISSI ZILI BERTOLINI",
       "especialidade": "GOB",
       "cidade": "",
@@ -8300,6 +9406,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "SONIA GOMES DUTRA",
       "especialidade": "NEU",
       "cidade": "",
@@ -8315,6 +9423,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "STEFANE COUTINHO CESTA",
       "especialidade": "GOB",
       "cidade": "",
@@ -8330,6 +9440,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "STEFANE COUTINHO CESTA",
       "especialidade": "GOB",
       "cidade": "",
@@ -8345,6 +9457,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "STEFANIE MIORI PERIN",
       "especialidade": "NUT",
       "cidade": "PIRACICABA",
@@ -8360,6 +9474,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TANIA MARA DA SILVA GOMES",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -8375,6 +9491,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TANIA MARA DA SILVA GOMES",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -8390,6 +9508,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TANIA MARIA SIMOES LUCAFO ZENERO",
       "especialidade": "RMT",
       "cidade": "PIRACICABA",
@@ -8405,6 +9525,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TERESA CRISTINA CASTRO VASCONCELLOS MOURA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8420,6 +9542,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TERESA CRISTINA CASTRO VASCONCELLOS MOURA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8435,6 +9559,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TERESA CRISTINA CASTRO VASCONCELLOS MOURA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8450,6 +9576,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TERESA CRISTINA CASTRO VASCONCELLOS MOURA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8465,6 +9593,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "THABATA PATTO GRACIANO CUNHA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8480,6 +9610,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "S",
       "medico_nome": "THABATA PATTO GRACIANO CUNHA",
       "especialidade": "GOB",
       "cidade": "PIRACICABA",
@@ -8495,6 +9627,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "THAIS CHAVES DE ABREU",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8510,6 +9644,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "THAIS CHAVES DE ABREU",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8525,6 +9661,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "THIAGO BALDESSIN MARIM",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -8540,6 +9678,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "THIAGO BALDESSIN MARIM",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -8555,6 +9695,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TIAGO VITOR RAMALHO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8570,6 +9712,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TIBOR RILHO PERROCO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8585,6 +9729,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TIBOR RILHO PERROCO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8600,6 +9746,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TIBOR RILHO PERROCO",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8615,6 +9763,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TICIANA CAROLINE GONCALVES BALERONI",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8630,6 +9780,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TICIANA CAROLINE GONCALVES BALERONI",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8645,6 +9797,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TUFI CHALITA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8660,6 +9814,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TUFI CHALITA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8675,6 +9831,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TUFI CHALITA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8690,6 +9848,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "TUFI CHALITA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8705,6 +9865,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ULISSES LIMA GOMES",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -8720,6 +9882,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "ULISSES LIMA GOMES",
       "especialidade": "CRD",
       "cidade": "PIRACICABA",
@@ -8735,6 +9899,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VALDIR COLLUCCI MACHADO",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -8750,6 +9916,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VANESSA SILVA CALHEIROS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8765,6 +9933,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VANESSA SILVA CALHEIROS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8780,6 +9950,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VANESSA SILVA CALHEIROS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8795,6 +9967,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VANESSA SILVA CALHEIROS",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8810,6 +9984,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VERONICA LORIA RODRIGUES EMILIO GAIOTTO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8825,6 +10001,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VERONICA LORIA RODRIGUES EMILIO GAIOTTO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8840,6 +10018,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VERONICA LORIA RODRIGUES EMILIO GAIOTTO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8855,6 +10035,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VERONICA LORIA RODRIGUES EMILIO GAIOTTO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8870,6 +10052,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VERONICA LORIA RODRIGUES EMILIO GAIOTTO",
       "especialidade": "END",
       "cidade": "PIRACICABA",
@@ -8885,6 +10069,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VINICIUS MONTANHERI SEBANICO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8900,6 +10086,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VINICIUS MONTANHERI SEBANICO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8915,6 +10103,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VINICIUS MONTANHERI SEBANICO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8930,6 +10120,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VINICIUS MONTANHERI SEBANICO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8945,6 +10137,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VINICIUS MONTANHERI SEBANICO",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8960,6 +10154,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VITOR MARTINS GONCALVES",
       "especialidade": "PSQ",
       "cidade": "PIRACICABA",
@@ -8975,6 +10171,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VITÓRIA GEWEHR FUCUTA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -8990,6 +10188,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VITÓRIA GEWEHR FUCUTA",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -9005,6 +10205,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VIVIAN BEATRIZ ORLANDO COELHO",
       "especialidade": "PSQ",
       "cidade": "",
@@ -9020,6 +10222,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VIVIAN BEATRIZ ORLANDO COELHO",
       "especialidade": "PSQ",
       "cidade": "",
@@ -9035,6 +10239,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "VIVIANE ZVEITER DE MORAES",
       "especialidade": "CLG",
       "cidade": "PIRACICABA",
@@ -9050,6 +10256,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WALLACE DORNELES GOMES 15 991778465",
       "especialidade": "RMT",
       "cidade": "",
@@ -9065,6 +10273,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WALTER ROSAMILIA KANTOVITZ",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -9080,6 +10290,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WALTER ROSAMILIA KANTOVITZ",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -9095,6 +10307,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WALTER ROSAMILIA KANTOVITZ",
       "especialidade": "ORT",
       "cidade": "PIRACICABA",
@@ -9110,6 +10324,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WERNER GARCIA DE SOUZA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -9125,6 +10341,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WERNER GARCIA DE SOUZA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -9140,6 +10358,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WERNER GARCIA DE SOUZA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -9155,6 +10375,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WERNER GARCIA DE SOUZA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -9170,6 +10392,8 @@
       "tarde": ""
     },
     {
+      "rota": "Piracicaba",
+      "agendado": "N",
       "medico_nome": "WERNER GARCIA DE SOUZA",
       "especialidade": "NEU",
       "cidade": "PIRACICABA",
@@ -9182,6 +10406,754 @@
       "observacao": "",
       "dia_semana": "SEX",
       "manha": "12:23",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "GIULIANO GIOCONDO GHIROTTI ANTONELLI",
+      "especialidade": "CLG",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-10:30",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "GIULIANO GIOCONDO GHIROTTI ANTONELLI",
+      "especialidade": "CLG",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "TER",
+      "manha": "8:00-10:30",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "GIULIANO GIOCONDO GHIROTTI ANTONELLI",
+      "especialidade": "CLG",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "QUI",
+      "manha": "8:00-10:30",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "GUSTAVO HENRIQUE BORTOLOZZO CORREA",
+      "especialidade": "CLG",
+      "cidade": "ÁGUAS DE SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "RUA ANTÔNIO FEIJÓ, S/N",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-11:30",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "GUSTAVO HENRIQUE BORTOLOZZO CORREA",
+      "especialidade": "CLG",
+      "cidade": "ÁGUAS DE SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "RUA ANTÔNIO FEIJÓ, S/N",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:30",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "NOHRA CHALITA NOHRA SOBRINHO SP76522",
+      "especialidade": "",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "08:00-10:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "ANDERSON DIAS SOUZA VIGO 239419",
+      "especialidade": "CLG",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "GABRIEL COELHO DE BARROS",
+      "especialidade": "CLG",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MAURO ZYMAN",
+      "especialidade": "ORT",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL GARCIA ARGUELLES",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "RUA MAESTRO BENEDITO QUINTINO, 1294",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MARCIO FABER",
+      "especialidade": "",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RONALDO JOSÉ DE LIMA",
+      "especialidade": "ORT",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-10:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "VINICIUS LIMA GOMES MOURA",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SÃO JUDAS TADEU",
+      "endereco": "AV MARIA CONCETTA COLOMBI 28",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:30-9:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "VINICIUS LIMA GOMES MOURA",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SÃO JUDAS TADEU",
+      "endereco": "AV MARIA CONCETTA COLOMBI 28",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "TER",
+      "manha": "8:30-9:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "VINICIUS LIMA GOMES MOURA",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SÃO JUDAS TADEU",
+      "endereco": "AV MARIA CONCETTA COLOMBI 28",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:30-9:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "KELLY ROMANI MOURA",
+      "especialidade": "PSQ",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:30-9:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "KELLY ROMANI MOURA",
+      "especialidade": "PSQ",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "TER",
+      "manha": "8:30-9:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "KELLY ROMANI MOURA",
+      "especialidade": "PSQ",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:30-9:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "JOAO VALCIR PRATTI",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "RUA ANTÔNIO BERGANTIM 511",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "joaopratti@yahoo.com.br",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "JOAO VALCIR PRATTI",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "RUA ANTÔNIO BERGANTIM 511",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "joaopratti@yahoo.com.br",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "REBECA ZILLI BERTOLINI PACHECO",
+      "especialidade": "CLG",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "ESCALA ÁGUAS DE SÃO PEDRO",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "OSWALDO OKUSU",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 243",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "droswaldookusu@ig.com.br",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "FERNANDO AUGUSTO ALVES ROCHA",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "QUI",
+      "manha": "SANTA CASA PLANTÃO",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "FERNANDO AUGUSTO ALVES ROCHA",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "CARLOS ANDRÉ DOS SANTOS MARTINS",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 243",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "UPA",
+      "dia_semana": "TER",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "CARLOS ANDRÉ DOS SANTOS MARTINS",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 243",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "UPA",
+      "dia_semana": "QUA",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "CARLOS ANDRÉ DOS SANTOS MARTINS",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 243",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "UPA",
+      "dia_semana": "SEX",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MAURICIO PEREIRA ROBERTO JUNIOR",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "RUA OLÍMPIA GENTIL DE ANDRADE 137",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "UPA",
+      "dia_semana": "SEX",
+      "manha": "7:00-12:01",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL BASTOS CURY",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "umis@saopedro.sp.gov.br",
+      "observacao": "",
+      "dia_semana": "QUA",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL BASTOS CURY",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "umis@saopedro.sp.gov.br",
+      "observacao": "",
+      "dia_semana": "QUI",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL BASTOS CURY",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "umis@saopedro.sp.gov.br",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "BENEDITO MARCOS RAHAL FARHAT",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SÃO JUDAS TADEU",
+      "endereco": "RUA ODILA VAIO 343",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "umis@saopedro.sp.gov.br",
+      "observacao": "Férias, retorna fevereiro",
+      "dia_semana": "SEG",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "BENEDITO MARCOS RAHAL FARHAT",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SÃO JUDAS TADEU",
+      "endereco": "RUA ODILA VAIO 343",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "umis@saopedro.sp.gov.br",
+      "observacao": "Férias, retorna fevereiro",
+      "dia_semana": "QUA",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "BENEDITO MARCOS RAHAL FARHAT",
+      "especialidade": "CLG",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SÃO JUDAS TADEU",
+      "endereco": "RUA ODILA VAIO 343",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "umis@saopedro.sp.gov.br",
+      "observacao": "Férias, retorna fevereiro",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "CELSO HENRIQUE DE AZEVEDO MARQUES",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "Ultrassom",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "CELSO HENRIQUE DE AZEVEDO MARQUES",
+      "especialidade": "GOB",
+      "cidade": "SÃO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 254",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MARCELO DA COSTA CAVALCANTI",
+      "especialidade": "GOB",
+      "cidade": "SAO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 204 SANTA CASA 0",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "QUI",
+      "manha": "SANTA CASA CIRURGIA",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MARCELO DA COSTA CAVALCANTI",
+      "especialidade": "GOB",
+      "cidade": "SAO PEDRO",
+      "bairro": "VILA NOVA",
+      "endereco": "MALAQUIAS GUERRA 204 SANTA CASA 0",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "7:00-12:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL PROTA",
+      "especialidade": "CRD",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SANTA CRUZ",
+      "endereco": "RUA VALENTIM AMARAL 467",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL PROTA",
+      "especialidade": "CRD",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SANTA CRUZ",
+      "endereco": "RUA VALENTIM AMARAL 467",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "QUA",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "RAFAEL PROTA",
+      "especialidade": "CRD",
+      "cidade": "SÃO PEDRO",
+      "bairro": "SANTA CRUZ",
+      "endereco": "RUA VALENTIM AMARAL 467",
+      "cep": "13520-000",
+      "telefone": "999999999",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "8:00-11:00",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MILENA DE CASSIA LIMA CSIZMAR",
+      "especialidade": "CLG",
+      "cidade": "ÁGUAS DE SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "RUA ANTÔNIO FEIJÓ, S/N",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "ESCALA ÁGUAS",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MILENA DE CASSIA LIMA CSIZMAR",
+      "especialidade": "CLG",
+      "cidade": "ÁGUAS DE SÃO PEDRO",
+      "bairro": "CENTRO",
+      "endereco": "RUA ANTÔNIO FEIJÓ, S/N",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEX",
+      "manha": "Mão Amiga",
+      "tarde": ""
+    },
+    {
+      "rota": "São Pedro",
+      "agendado": "",
+      "medico_nome": "MAYARA TABAI SERAFIM",
+      "especialidade": "",
+      "cidade": "",
+      "bairro": "",
+      "endereco": "",
+      "cep": "",
+      "telefone": "",
+      "celular": "",
+      "email": "",
+      "observacao": "",
+      "dia_semana": "SEG",
+      "manha": "Otorrino sexta manhã",
       "tarde": ""
     }
   ]
