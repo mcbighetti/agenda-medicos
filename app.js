@@ -1,9 +1,3 @@
-// app.js (robusto)
-// - Aceita variações de nomes de colunas (tarde/TARDE/...)
-// - Filtro Tarde/Manhã funciona mesmo com formatos diferentes
-// - "Atualizar agora" recarrega do RAW (evita cache do Pages)
-
-// ⚠️ Ajuste aqui se mudar repo/branch:
 const RAW_DATA_URL_BASE = "https://raw.githubusercontent.com/mcbighetti/agenda-medicos/main/data.json";
 
 const DAYS = [
@@ -17,15 +11,8 @@ const DAYS = [
 let data = [];
 let activeDay = guessTodayKey();
 
-// Estado da UI (o que você mexe)
-let uiState = {
-  rota: 'TODAS',
-  ag: 'TODOS',
-  periodo: 'AMBOS',
-  query: ''
-};
-
-// Estado aplicado (só muda quando clica OK)
+// UI state
+let uiState = { rota: 'TODAS', ag: 'TODOS', periodo: 'AMBOS', query: '' };
 let appliedState = { ...uiState };
 
 const $days = document.getElementById('days');
@@ -54,17 +41,13 @@ function normalize(s) {
     .replace(/\p{Diacritic}/gu, '');
 }
 
-// Pega um campo aceitando variações: "tarde", "TARDE", "tarde " etc.
 function getField(row, candidates) {
-  for (const key of candidates) {
-    if (key in row) return row[key];
-  }
-  // tenta match "case-insensitive" e ignorando espaços
+  for (const key of candidates) if (key in row) return row[key];
   const keys = Object.keys(row);
   for (const k of keys) {
-    const nk = normalize(k).replace(/\s+/g, '');
+    const nk = normalize(k).replace(/\s+/g,'');
     for (const c of candidates) {
-      const nc = normalize(c).replace(/\s+/g, '');
+      const nc = normalize(c).replace(/\s+/g,'');
       if (nk === nc) return row[k];
     }
   }
@@ -87,11 +70,7 @@ function excelFractionToHHmm(n){
 
 function toHHmm(v){
   if (v == null) return '';
-
-  if (typeof v === 'number') {
-    const hhmm = excelFractionToHHmm(v);
-    return hhmm || String(v);
-  }
+  if (typeof v === 'number') return excelFractionToHHmm(v) || String(v);
 
   const s = v.toString().trim();
   if (!s) return '';
@@ -105,14 +84,7 @@ function toHHmm(v){
   if (isISODateString(s)) {
     const m = s.match(/T(\d{2}):(\d{2}):/);
     if (m) return `${m[1]}:${m[2]}`;
-    const d = new Date(s);
-    if (!isNaN(d.getTime())) {
-      const hh = String(d.getHours()).padStart(2,'0');
-      const mm = String(d.getMinutes()).padStart(2,'0');
-      return `${hh}:${mm}`;
-    }
   }
-
   return s;
 }
 
@@ -131,8 +103,8 @@ function extractFirstTime(v) {
 }
 
 function rowStartTime(row) {
-  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha','MANHA ']);
-  const tarde = getField(row, ['tarde','TARDE','Tarde','TARDE ']);
+  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
+  const tarde = getField(row, ['tarde','TARDE','Tarde']);
   return Math.min(extractFirstTime(manha), extractFirstTime(tarde));
 }
 
@@ -143,19 +115,15 @@ function isAgendado(row) {
 
 function matchesQuery(row, q) {
   if (!q) return true;
-
   const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
   const tarde = getField(row, ['tarde','TARDE','Tarde']);
   const ag = getField(row, ['agendado','AGENDADO','AGENDADO?','Agendado']);
 
   const hay = normalize([
-    row.rota,
-    row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
+    row.rota, row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
     row.observacao, row.telefone, row.celular, row.email,
-    manha, tarde,
-    ag
+    manha, tarde, ag
   ].join(' | '));
-
   return hay.includes(q);
 }
 
@@ -185,15 +153,6 @@ function renderDays() {
   });
 }
 
-function formatHorario(row) {
-  const manha = getField(row, ['manha','MANHA','MANHÃ','Manhã','Manha']);
-  const tarde = getField(row, ['tarde','TARDE','Tarde']);
-  const parts = [];
-  if (hasTimeValue(manha)) parts.push(`Manhã: ${toHHmm(manha)}`);
-  if (hasTimeValue(tarde)) parts.push(`Tarde: ${toHHmm(tarde)}`);
-  return parts.join(' • ');
-}
-
 function setUpdatedAtText(payload, fallbackTotal) {
   if (Array.isArray(payload)) {
     $updatedAt.textContent = `Registros: ${fallbackTotal}`;
@@ -213,6 +172,27 @@ function setUpdatedAtText(payload, fallbackTotal) {
   }
 }
 
+function makeTimeBlock(manha, tarde){
+  const wrap = document.createElement('div');
+  wrap.className = 'times';
+
+  if (hasTimeValue(manha)) {
+    const row = document.createElement('div');
+    row.className = 'time-row';
+    row.innerHTML = `<span class="time-label">Manhã</span><span class="time-value">${toHHmm(manha).replace('-', ' às ')}</span>`;
+    wrap.appendChild(row);
+  }
+
+  if (hasTimeValue(tarde)) {
+    const row = document.createElement('div');
+    row.className = 'time-row';
+    row.innerHTML = `<span class="time-label">Tarde</span><span class="time-value">${toHHmm(tarde).replace('-', ' às ')}</span>`;
+    wrap.appendChild(row);
+  }
+
+  return wrap;
+}
+
 function render() {
   const q = normalize(appliedState.query);
   const rota = appliedState.rota;
@@ -230,7 +210,7 @@ function render() {
       return true;
     })
     .filter(r => {
-      // ✅ Se estiver AGENDADO, não some por período (Manhã/Tarde)
+      // Se AGENDADO, não some por período
       if (isAgendado(r)) return true;
 
       const manha = getField(r, ['manha','MANHA','MANHÃ','Manhã','Manha']);
@@ -265,36 +245,35 @@ function render() {
     name.className = 'name';
     name.textContent = r.medico_nome || '(Sem nome)';
 
-    const time = document.createElement('div');
-    time.className = 'time';
-
+    const right = document.createElement('div');
     if (isAgendado(r)) {
       const badge = document.createElement('span');
       badge.className = 'badge-ag';
       badge.textContent = 'AGENDADO';
-      time.appendChild(badge);
-    } else {
-      time.textContent = formatHorario(r);
+      right.appendChild(badge);
     }
 
     title.appendChild(name);
-    title.appendChild(time);
+    title.appendChild(right);
 
     const sub = document.createElement('div');
     sub.className = 'sub';
     const pieces = [r.especialidade, r.cidade, r.rota ? `Rota: ${r.rota}` : ''].filter(Boolean);
     sub.textContent = pieces.join(' • ');
 
+    const manha = getField(r, ['manha','MANHA','MANHÃ','Manhã','Manha']);
+    const tarde = getField(r, ['tarde','TARDE','Tarde']);
+
+    const timeBlock = makeTimeBlock(manha, tarde);
+
     const pills = document.createElement('div');
     pills.className = 'pills';
-
     const pillItems = [
       r.bairro ? `Bairro: ${r.bairro}` : '',
       r.telefone ? `Tel: ${r.telefone}` : '',
       r.celular ? `Cel: ${r.celular}` : '',
       r.email ? `E-mail: ${r.email}` : '',
     ].filter(Boolean);
-
     pillItems.forEach(t => {
       const p = document.createElement('span');
       p.className = 'pill';
@@ -325,6 +304,7 @@ function render() {
 
     card.appendChild(title);
     card.appendChild(sub);
+    if (timeBlock.childNodes.length) card.appendChild(timeBlock);
     if (pills.childNodes.length) card.appendChild(pills);
     if (addr.textContent || addr.childNodes.length) card.appendChild(addr);
     if (r.observacao) card.appendChild(obs);
@@ -338,7 +318,6 @@ async function load() {
     $meta.textContent = 'Atualizando…';
     $refreshBtn.disabled = true;
 
-    // ✅ Puxa direto do RAW (menos cache) + cache bust
     const url = RAW_DATA_URL_BASE + "?v=" + Date.now();
     const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error('Falha ao carregar data.json');
@@ -365,13 +344,9 @@ async function load() {
   }
 }
 
-/* =========================
-   Eventos (UI -> uiState)
-   Aplicação só no OK
-========================= */
+/* Eventos */
 $q.addEventListener('input', (ev) => { uiState.query = ev.target.value || ''; });
 $q.addEventListener('keydown', (e) => { if (e.key === 'Enter') applyFilters(); });
-
 $rota.addEventListener('change', (e) => { uiState.rota = e.target.value; });
 $ag.addEventListener('change', (e) => { uiState.ag = e.target.value; });
 
@@ -379,7 +354,6 @@ $periodo.addEventListener('click', (e) => {
   const btn = e.target.closest('.toggle-btn');
   if (!btn) return;
   uiState.periodo = btn.dataset.p;
-
   [...$periodo.querySelectorAll('.toggle-btn')].forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 });
