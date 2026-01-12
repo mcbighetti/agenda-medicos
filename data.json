@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated_at": "2026-01-12T14:13:18.434Z",
+    "updated_at": "2026-01-12T14:14:21.420Z",
     "total_registros": 656
   },
   "registros": [
@@ -5934,7 +5934,7 @@
       "email": "",
       "observacao": "",
       "dia_semana": "SEG",
-      "manha": "AGENDADO 11:30 SEG a QUI",
+      "manha": "AGENDADO",
       "tarde": ""
     },
     {
