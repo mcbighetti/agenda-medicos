@@ -3,192 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Consulta de Médicos — por dia</title>
-
-  <style>
-    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
-    body { margin: 0; background: #f6f7f9; color: #111; }
-    header {
-      padding: 16px 16px 10px;
-      background: white;
-      position: sticky; top: 0; z-index: 5;
-      box-shadow: 0 1px 10px rgba(0,0,0,.06);
-    }
-    h1 { margin: 0 0 10px; font-size: 18px; }
-    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-
-    .day-btn {
-      border: 1px solid #d0d5dd; background: white; padding: 10px 12px; border-radius: 10px;
-      cursor: pointer; font-weight: 800; min-width: 54px; touch-action: manipulation;
-    }
-    .day-btn.active { border-color: #111; }
-
-    .search {
-      flex: 1; min-width: 220px;
-      border: 1px solid #d0d5dd; border-radius: 10px; padding: 10px 12px; background: #fff;
-      font-size: 14px;
-    }
-
-    .select{
-      border: 1px solid #d0d5dd;
-      border-radius: 10px;
-      padding: 10px 12px;
-      background: #fff;
-      font-size: 14px;
-      min-width: 190px;
-    }
-
-    .toggle{
-      display:flex;
-      border:1px solid #d0d5dd;
-      border-radius: 12px;
-      overflow:hidden;
-      background:#fff;
-    }
-    .toggle-btn{
-      border:0;
-      background:transparent;
-      padding:10px 12px;
-      cursor:pointer;
-      font-weight:900;
-      touch-action: manipulation;
-    }
-    .toggle-btn.active{
-      background:#111;
-      color:#fff;
-    }
-
-    main { padding: 16px; max-width: 1080px; margin: 0 auto; }
-    .meta { font-size: 12px; color: #667085; margin-top: 10px; }
-
-    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); margin-top: 14px; }
-    .card {
-      background: white; border: 1px solid #eaecf0; border-radius: 14px; padding: 12px 12px;
-      box-shadow: 0 1px 10px rgba(0,0,0,.04);
-    }
-    .title { display:flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-    .name { margin: 0; font-size: 15px; font-weight: 900; line-height: 1.2; }
-    .time { font-size: 12px; font-weight: 900; white-space: nowrap; }
-
-    .badge-ag{
-      display:inline-block;
-      font-size: 12px;
-      font-weight: 900;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid #111;
-      background: #111;
-      color: #fff;
-      white-space: nowrap;
-    }
-
-    .sub { margin: 6px 0 0; font-size: 13px; color: #344054; }
-    .pills { margin-top: 8px; }
-    .pill {
-      display:inline-block; font-size: 12px; padding: 4px 8px; border-radius: 999px;
-      border: 1px solid #eaecf0; background:#f9fafb; margin: 6px 6px 0 0;
-    }
-    .obs { margin: 10px 0 0; font-size: 12px; color: #475467; }
-    .addr { margin: 10px 0 0; font-size: 12px; color: #475467; }
-    .addr a { color: inherit; text-decoration: underline; }
-
-    .empty { background: #fff; border: 1px dashed #d0d5dd; padding: 18px; border-radius: 14px; color:#475467; }
-    .footer { font-size: 11px; color:#98a2b3; margin-top: 18px; }
-
-    .refresh-wrap { display:flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .refresh-btn{
-      border: 1px solid #111;
-      background: #111;
-      color: #fff;
-      padding: 10px 12px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 900;
-      touch-action: manipulation;
-    }
-    .refresh-btn:active{ transform: translateY(1px); }
-
-    @media (max-width: 520px){
-      header { padding: 14px 12px 10px; }
-      .day-btn { padding: 12px 14px; min-width: 64px; }
-      .search { font-size: 16px; } /* evita zoom no iPhone */
-      .select { width: 100%; font-size: 16px; }
-      .toggle { width: 100%; }
-      .toggle-btn { flex: 1; padding: 12px 12px; }
-      .grid { grid-template-columns: 1fr; }
-      .refresh-btn { width: 100%; }
-      .refresh-wrap { width: 100%; }
-    }
-  </style>
-
-  <!-- Login -->
-  <style>
-    .login-overlay{
-      position:fixed; inset:0; background:rgba(246,247,249,.98);
-      display:flex; align-items:center; justify-content:center; z-index:9999;
-      padding:16px;
-    }
-    .login-card{
-      width:min(420px, 100%); background:#fff; border:1px solid #eaecf0;
-      border-radius:16px; padding:16px; box-shadow:0 12px 40px rgba(0,0,0,.10);
-    }
-    .login-card h2{ margin:0 0 10px; font-size:16px; }
-    .login-card p{ margin:0 0 12px; color:#475467; font-size:13px; line-height:1.35;}
-    .login-card label{ display:block; font-size:12px; color:#344054; margin:10px 0 6px; font-weight:900;}
-    .login-card input{
-      width:100%; box-sizing:border-box;
-      border:1px solid #d0d5dd; border-radius:10px; padding:10px 12px; font-size:14px;
-    }
-    .login-actions{ display:flex; gap:10px; margin-top:12px; align-items:center; }
-    .login-btn{
-      border:1px solid #111; background:#111; color:#fff; padding:10px 12px; border-radius:10px;
-      cursor:pointer; font-weight:900;
-    }
-    .login-err{ margin-top:10px; color:#b42318; font-size:12px; display:none;}
-    .login-note{ margin-top:10px; color:#98a2b3; font-size:11px;}
-
-    /* --- FIX: filtros sempre visíveis --- */
-#rota, #ag { display: inline-block; }
-
-.select{
-  border: 1px solid #d0d5dd !important;
-  border-radius: 10px !important;
-  padding: 10px 12px !important;
-  background: #fff !important;
-  font-size: 14px !important;
-  min-width: 190px !important;
-}
-
-.toggle{
-  display:flex !important;
-  border:1px solid #d0d5dd !important;
-  border-radius: 12px !important;
-  overflow:hidden !important;
-  background:#fff !important;
-}
-
-.toggle-btn{
-  display:inline-block !important;
-  border:0 !important;
-  background:transparent !important;
-  padding:10px 12px !important;
-  cursor:pointer !important;
-  font-weight:900 !important;
-  touch-action: manipulation;
-}
-
-.toggle-btn.active{
-  background:#111 !important;
-  color:#fff !important;
-}
-
-@media (max-width: 520px){
-  .select{ width:100% !important; font-size:16px !important; }
-  .toggle{ width:100% !important; }
-  .toggle-btn{ flex:1 !important; padding:12px 12px !important; }
-}
-    
-  </style>
+  <title>Agenda de Médicos — Consulta</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
@@ -205,359 +21,69 @@
         <button class="login-btn" id="loginBtn" type="button">Entrar</button>
       </div>
       <div class="login-err" id="loginErr">Usuário ou senha inválidos.</div>
-      <div class="login-note">Dica: para segurança real, use Netlify Identity / Cloudflare Access / backend.</div>
+      <div class="login-note">Dica: para segurança real, usar autenticação de verdade (Cloudflare Access/Netlify/Backend).</div>
     </div>
   </div>
 
-  <header>
-    <h1>Consulta rápida — atendimentos por dia</h1>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div>
+          <h1>Consulta rápida — atendimentos</h1>
+          <div class="subtitle">Filtre por dia, rota, período e agendamento</div>
+        </div>
 
-    <div class="row" id="days"></div>
-
-    <div class="row" style="margin-top:10px;">
-      <input id="q" class="search" placeholder="Buscar por médico, cidade, especialidade, bairro, observação..." />
-    </div>
-
-    <!-- Filtros -->
-    <div class="row" style="margin-top:10px;">
-      <select id="rota" class="select">
-        <option value="TODAS">Todas as rotas</option>
-        <option value="Piracicaba">Piracicaba</option>
-        <option value="São Pedro">São Pedro</option>
-      </select>
-
-      <select id="ag" class="select">
-        <option value="TODOS">Agendado? (Todos)</option>
-        <option value="S">Somente AGENDADOS</option>
-        <option value="N">Somente NÃO agendados</option>
-      </select>
-
-      <div class="toggle" id="periodo">
-        <button type="button" class="toggle-btn active" data-p="AMBOS">Ambos</button>
-        <button type="button" class="toggle-btn" data-p="MANHA">Manhã</button>
-        <button type="button" class="toggle-btn" data-p="TARDE">Tarde</button>
+        <!-- Logo do Aché (suba em assets/logo-ache.png) -->
+        <img class="brand-logo" src="./assets/logo-ache.png" alt="Aché" onerror="this.style.display='none';" />
       </div>
-    </div>
 
-    <!-- Linha com contador + botão -->
-    <div class="refresh-wrap" style="margin-top:10px;">
-      <div class="meta" id="meta">Carregando…</div>
-      <button class="refresh-btn" id="refreshBtn" type="button">Atualizar agora</button>
-    </div>
+      <div class="row" id="days"></div>
 
-    <!-- Última atualização -->
-    <div class="meta" id="updatedAt"></div>
+      <div class="row">
+        <input id="q" class="search" placeholder="Buscar por médico, cidade, especialidade, bairro, observação..." />
+      </div>
+
+      <div class="row">
+        <select id="rota" class="select">
+          <option value="TODAS">Todas as rotas</option>
+          <option value="Piracicaba">Piracicaba</option>
+          <option value="São Pedro">São Pedro</option>
+        </select>
+
+        <select id="ag" class="select">
+          <option value="TODOS">Agendado? (Todos)</option>
+          <option value="S">Somente AGENDADOS</option>
+          <option value="N">Somente NÃO agendados</option>
+        </select>
+
+        <div class="toggle" id="periodo">
+          <button type="button" class="toggle-btn active" data-p="AMBOS">Ambos</button>
+          <button type="button" class="toggle-btn" data-p="MANHA">Manhã</button>
+          <button type="button" class="toggle-btn" data-p="TARDE">Tarde</button>
+        </div>
+      </div>
+
+      <div class="row actions">
+        <div class="meta" id="meta">Carregando…</div>
+
+        <div class="btn-group">
+          <button class="btn btn-ghost" id="applyBtn" type="button">Aplicar filtros (OK)</button>
+          <button class="btn btn-primary" id="refreshBtn" type="button">Atualizar agora</button>
+        </div>
+      </div>
+
+      <div class="meta" id="updatedAt"></div>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
     <div class="grid" id="list"></div>
     <div class="footer" id="footer"></div>
   </main>
 
-  <script>
-    const DAYS = [
-      { key: 'SEG', label: 'Seg' },
-      { key: 'TER', label: 'Ter' },
-      { key: 'QUA', label: 'Qua' },
-      { key: 'QUI', label: 'Qui' },
-      { key: 'SEX', label: 'Sex' },
-    ];
+  <script src="./app.js"></script>
 
-    let data = [];
-    let activeDay = guessTodayKey();
-    let query = '';
-
-    let periodo = 'AMBOS';
-    let rota = 'TODAS';
-    let ag = 'TODOS';
-
-    const $days = document.getElementById('days');
-    const $list = document.getElementById('list');
-    const $meta = document.getElementById('meta');
-    const $updatedAt = document.getElementById('updatedAt');
-    const $q = document.getElementById('q');
-    const $footer = document.getElementById('footer');
-    const $refreshBtn = document.getElementById('refreshBtn');
-    const $rota = document.getElementById('rota');
-    const $ag = document.getElementById('ag');
-    const $periodo = document.getElementById('periodo');
-
-    function guessTodayKey() {
-      const map = ['DOM','SEG','TER','QUA','QUI','SEX','SAB'];
-      const k = map[new Date().getDay()];
-      return (k === 'DOM' || k === 'SAB') ? 'SEG' : k;
-    }
-
-    function normalize(s) {
-      return (s ?? '')
-        .toString()
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/\p{Diacritic}/gu, '');
-    }
-
-    function extractFirstTime(s) {
-      const m = (s || '').match(/(\d{1,2}):(\d{2})/);
-      if (!m) return 9999;
-      return parseInt(m[1].padStart(2,'0') + m[2], 10);
-    }
-
-    function rowStartTime(row) {
-      return Math.min(extractFirstTime(row.manha), extractFirstTime(row.tarde));
-    }
-
-    function renderDays() {
-      $days.innerHTML = '';
-      DAYS.forEach(d => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'day-btn' + (d.key === activeDay ? ' active' : '');
-        btn.textContent = d.label;
-        btn.onclick = () => { activeDay = d.key; render(); renderDays(); };
-        $days.appendChild(btn);
-      });
-    }
-
-    function matchesQuery(row, q) {
-      if (!q) return true;
-      const hay = normalize([
-        row.rota,
-        row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
-        row.observacao, row.telefone, row.celular, row.email,
-        row.manha, row.tarde,
-        row.agendado
-      ].join(' | '));
-      return hay.includes(q);
-    }
-
-    function isAgendado(row) {
-      return (row.agendado || '').toString().trim().toUpperCase() === 'S';
-    }
-
-    function formatHorario(row) {
-      // Se for agendado, exibe somente "AGENDADO"
-      if (isAgendado(row)) return 'AGENDADO';
-
-      const parts = [];
-      if (row.manha) parts.push(`Manhã: ${row.manha}`);
-      if (row.tarde) parts.push(`Tarde: ${row.tarde}`);
-      return parts.length ? parts.join(' • ') : '';
-    }
-
-    function buildWazeLink(row) {
-      // Monta um link Waze com endereço + cidade (se existir)
-      const parts = [];
-      if (row.endereco) parts.push(row.endereco);
-      if (row.bairro) parts.push(row.bairro);
-      if (row.cidade) parts.push(row.cidade);
-      const q = parts.filter(Boolean).join(', ');
-      if (!q) return null;
-
-      const encoded = encodeURIComponent(q);
-      return `https://waze.com/ul?q=${encoded}&navigate=yes`;
-    }
-
-    function render() {
-      const q = normalize(query);
-
-      const filtered = data
-        .filter(r => (r.dia_semana || '').toUpperCase() === activeDay)
-        .filter(r => (rota === 'TODAS' ? true : (r.rota || '') === rota))
-        .filter(r => {
-          const v = (r.agendado || '').toString().trim().toUpperCase();
-          if (ag === 'S') return v === 'S';
-          if (ag === 'N') return v === 'N' || v === '';
-          return true;
-        })
-        .filter(r => {
-          // Período filtra por preenchimento
-          if (periodo === 'MANHA') return !!(r.manha && r.manha.toString().trim());
-          if (periodo === 'TARDE') return !!(r.tarde && r.tarde.toString().trim());
-          return true; // AMBOS
-        })
-        .filter(r => matchesQuery(r, q))
-        .sort((a,b) => rowStartTime(a) - rowStartTime(b));
-
-      $meta.textContent = `${filtered.length} atendimento(s) em ${activeDay} • Total de registros: ${data.length}`;
-      $list.innerHTML = '';
-
-      if (filtered.length === 0) {
-        const div = document.createElement('div');
-        div.className = 'empty';
-        div.textContent = 'Nenhum atendimento encontrado para este dia com esse filtro.';
-        $list.appendChild(div);
-        return;
-      }
-
-      filtered.forEach(r => {
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        const title = document.createElement('div');
-        title.className = 'title';
-
-        const name = document.createElement('p');
-        name.className = 'name';
-        name.textContent = r.medico_nome || '(Sem nome)';
-
-        const time = document.createElement('div');
-        time.className = 'time';
-
-        // Se agendado, mostrar um badge (e ocultar horários)
-        if (isAgendado(r)) {
-          const badge = document.createElement('span');
-          badge.className = 'badge-ag';
-          badge.textContent = 'AGENDADO';
-          time.appendChild(badge);
-        } else {
-          time.textContent = formatHorario(r);
-        }
-
-        title.appendChild(name);
-        title.appendChild(time);
-
-        const sub = document.createElement('div');
-        sub.className = 'sub';
-        const pieces = [r.especialidade, r.cidade, r.rota ? `Rota: ${r.rota}` : ''].filter(Boolean);
-        sub.textContent = pieces.join(' • ');
-
-        const pills = document.createElement('div');
-        pills.className = 'pills';
-        const pillItems = [
-          r.bairro ? `Bairro: ${r.bairro}` : '',
-          r.telefone ? `Tel: ${r.telefone}` : '',
-          r.celular ? `Cel: ${r.celular}` : '',
-          r.email ? `E-mail: ${r.email}` : '',
-        ].filter(Boolean);
-
-        pillItems.forEach(t => {
-          const p = document.createElement('span');
-          p.className = 'pill';
-          p.textContent = t;
-          pills.appendChild(p);
-        });
-
-        const addr = document.createElement('div');
-        addr.className = 'addr';
-        const waze = buildWazeLink(r);
-
-        if (waze) {
-          const a = document.createElement('a');
-          a.href = waze;
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
-          const label = [r.endereco, r.cep ? `CEP: ${r.cep}` : ''].filter(Boolean).join(' • ') || 'Abrir no Waze';
-          a.textContent = label + ' • (Abrir no Waze)';
-          addr.appendChild(a);
-        } else {
-          const addrPieces = [r.endereco, r.cep ? `CEP: ${r.cep}` : ''].filter(Boolean);
-          if (addrPieces.length) addr.textContent = addrPieces.join(' • ');
-        }
-
-        const obs = document.createElement('div');
-        obs.className = 'obs';
-        if (r.observacao) obs.textContent = `Obs: ${r.observacao}`;
-
-        card.appendChild(title);
-        card.appendChild(sub);
-        if (pills.childNodes.length) card.appendChild(pills);
-        if (addr.textContent || addr.childNodes.length) card.appendChild(addr);
-        if (r.observacao) card.appendChild(obs);
-
-        $list.appendChild(card);
-      });
-    }
-
-    function setUpdatedAtText(payload, fallbackTotal) {
-      if (Array.isArray(payload)) {
-        $updatedAt.textContent = '';
-        return;
-      }
-      const meta = payload?.meta || {};
-      const total = (typeof meta.total_registros === 'number') ? meta.total_registros : fallbackTotal;
-
-      if (meta.updated_at) {
-        const d = new Date(meta.updated_at);
-        const ok = !isNaN(d.getTime());
-        $updatedAt.textContent = ok
-          ? `Última atualização: ${d.toLocaleString('pt-BR')} • Registros: ${total}`
-          : `Registros: ${total}`;
-      } else {
-        $updatedAt.textContent = `Registros: ${total}`;
-      }
-    }
-
-    async function load() {
-      try {
-        $meta.textContent = 'Carregando…';
-        $list.innerHTML = '';
-
-        const url = './data.json?v=' + Date.now();
-        const res = await fetch(url, { cache: 'no-store' });
-        if (!res.ok) throw new Error('Falha ao carregar data.json');
-
-        const payload = await res.json();
-
-        // Aceita:
-        // 1) array (formato antigo)
-        // 2) { meta: {...}, registros: [...] } (formato novo)
-        if (Array.isArray(payload)) {
-          data = payload;
-          setUpdatedAtText(payload, data.length);
-        } else {
-          data = Array.isArray(payload.registros) ? payload.registros : [];
-          setUpdatedAtText(payload, data.length);
-        }
-
-        if (!Array.isArray(data)) throw new Error('data.json inválido (esperado array ou {registros: []}).');
-
-        renderDays();
-        render();
-        $footer.textContent = `Dica: no celular, toque no endereço para abrir no Waze.`;
-      } catch (e) {
-        $meta.textContent = 'Erro ao carregar dados.';
-        $updatedAt.textContent = '';
-        $list.innerHTML = `<div class="empty">${String(e.message || e)}<br><br>
-        Dica: confirme se <b>data.json</b> está no mesmo diretório do <b>index.html</b>.
-        </div>`;
-      }
-    }
-
-    // Eventos
-    $q.addEventListener('input', (ev) => {
-      query = ev.target.value || '';
-      render();
-    });
-
-    $refreshBtn.addEventListener('click', async () => {
-      await load();
-    });
-
-    $rota.addEventListener('change', (e) => {
-      rota = e.target.value;
-      render();
-    });
-
-    $ag.addEventListener('change', (e) => {
-      ag = e.target.value;
-      render();
-    });
-
-    $periodo.addEventListener('click', (e) => {
-      const btn = e.target.closest('.toggle-btn');
-      if (!btn) return;
-      periodo = btn.dataset.p;
-
-      [...$periodo.querySelectorAll('.toggle-btn')].forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      render();
-    });
-
-    // Start
-    load();
-  </script>
-
+  <!-- Login script -->
   <script>
     // ⚠️ Bloqueio simples (client-side). NÃO é segurança real.
     const AUTH_USER = "Murilo";
