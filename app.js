@@ -1,4 +1,5 @@
-// app.js — versão blindada (não trava) + init after DOM + botões sempre clicáveis
+// app.js — versão blindada + períodos por horário real (corrige tarde/manhã invertidos)
+// Mantém: filtros rota/agendamento, botões OK/Atualizar, Waze, ordem alfabética
 
 const RAW_DATA_URL_BASE = "https://raw.githubusercontent.com/mcbighetti/agenda-medicos/main/data.json";
 
@@ -51,45 +52,71 @@ function excelFractionToHHmm(n){
   return `${hh}:${mm}`;
 }
 
-function extractTimeRange(raw){
-  if (raw == null) return { start: "", end: "", raw: "" };
-
+// Extrai TODOS os horários HH:mm presentes no texto (robusto)
+function extractAllTimes(raw){
+  if (raw == null) return [];
   if (typeof raw === "number") {
-    const hhmm = excelFractionToHHmm(raw);
-    return { start: hhmm, end: "", raw: hhmm };
+    const t = excelFractionToHHmm(raw);
+    return t ? [t] : [];
   }
 
   const s = raw.toString().trim();
-  if (!s) return { start: "", end: "", raw: "" };
+  if (!s) return [];
 
   if (isISODateString(s)) {
     const m = s.match(/T(\d{2}):(\d{2}):/);
     const hhmm = m ? `${m[1]}:${m[2]}` : "";
-    return { start: hhmm, end: "", raw: hhmm || s };
+    return hhmm ? [hhmm] : [];
   }
 
-  const times = [...s.matchAll(/(\d{1,2}):(\d{2})/g)].map(m => {
+  return [...s.matchAll(/(\d{1,2}):(\d{2})/g)].map(m => {
     const hh = String(m[1]).padStart(2,"0");
     const mm = m[2];
     return `${hh}:${mm}`;
   });
+}
 
-  if (times.length === 0) return { start: "", end: "", raw: s };
-  if (times.length === 1) return { start: times[0], end: "", raw: s };
-  return { start: times[0], end: times[1], raw: s };
+function toMinutes(hhmm){
+  const m = (hhmm || "").match(/^(\d{2}):(\d{2})$/);
+  if (!m) return null;
+  return parseInt(m[1],10) * 60 + parseInt(m[2],10);
 }
 
 function hasTimeValue(v){
-  const { start, end, raw } = extractTimeRange(v);
-  if ((start || end || "").trim()) return true;
-  return /(\d{1,2}):(\d{2})/.test(String(raw || ""));
+  return extractAllTimes(v).length > 0;
 }
 
-function displayRange(v){
-  const { start, end, raw } = extractTimeRange(v);
-  if (start && end) return `${start} às ${end}`;
-  if (start) return `${start}`;
-  return (raw || "").toString().trim();
+function displayRangeFromTimes(t1, t2){
+  if (t1 && t2) return `${t1} às ${t2}`;
+  if (t1) return `${t1}`;
+  return "";
+}
+
+// Divide uma célula em “faixas” sequenciais: (t0,t1), (t2,t3)...
+// Ex: "08:00-11:30 13:30-17:00" => ["08:00 às 11:30", "13:30 às 17:00"]
+function splitIntoRanges(raw){
+  const times = extractAllTimes(raw);
+  if (times.length === 0) return [];
+
+  const ranges = [];
+  for (let i=0; i<times.length; i+=2){
+    const a = times[i];
+    const b = times[i+1] || "";
+    ranges.push(displayRangeFromTimes(a, b));
+  }
+  return ranges.filter(Boolean);
+}
+
+// Detecta presença de manhã/tarde em uma célula olhando TODOS horários
+function periodsPresent(raw){
+  const times = extractAllTimes(raw).map(toMinutes).filter(v => v != null);
+  let hasM = false;
+  let hasT = false;
+  for (const mins of times){
+    if (mins < 12*60) hasM = true;
+    else hasT = true;
+  }
+  return { hasM, hasT };
 }
 
 function isAgendado(row){
@@ -99,14 +126,17 @@ function isAgendado(row){
 
 function matchesQuery(row, q) {
   if (!q) return true;
+
   const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
   const tarde = getField(row, ["tarde","TARDE","Tarde"]);
   const ag = getField(row, ["agendado","AGENDADO","AGENDADO?","Agendado"]);
+
   const hay = normalize([
     row.rota, row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
     row.observacao, row.telefone, row.celular, row.email,
     String(manha ?? ""), String(tarde ?? ""), String(ag ?? "")
   ].join(" | "));
+
   return hay.includes(q);
 }
 
@@ -120,51 +150,23 @@ function buildWazeLink(row){
   return `https://waze.com/ul?q=${encodeURIComponent(qq)}&navigate=yes`;
 }
 
-// ✅ regra fiel: período depende de existir horário naquele período
-function firstTimeMinutes(raw){
-  const { start } = extractTimeRange(raw);
-  if (!start) return null;
-  const m = start.match(/^(\d{2}):(\d{2})$/);
-  if (!m) return null;
-  return (parseInt(m[1],10) * 60) + parseInt(m[2],10);
-}
-
-function classifyAsPeriod(raw){
-  // retorna "MANHA" ou "TARDE" baseado no horário
-  const mins = firstTimeMinutes(raw);
-  if (mins == null) return null;
-  return mins < (12 * 60) ? "MANHA" : "TARDE";
-}
-
-function hasAnyMorning(row){
-  const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
-  const tarde = getField(row, ["tarde","TARDE","Tarde"]);
-
-  // pode estar invertido no JSON — então avalia os dois campos
-  const p1 = classifyAsPeriod(manha);
-  const p2 = classifyAsPeriod(tarde);
-
-  return p1 === "MANHA" || p2 === "MANHA";
-}
-
-function hasAnyAfternoon(row){
-  const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
-  const tarde = getField(row, ["tarde","TARDE","Tarde"]);
-
-  const p1 = classifyAsPeriod(manha);
-  const p2 = classifyAsPeriod(tarde);
-
-  return p1 === "TARDE" || p2 === "TARDE";
-}
-
-// ✅ substitui a matchPeriodo atual por esta:
+// ✅ Período por horário REAL (não depende de “coluna manhã/tarde” estar correta no JSON)
 function matchPeriodo(row, periodo){
-  if (periodo === "MANHA") return hasAnyMorning(row);
-  if (periodo === "TARDE") return hasAnyAfternoon(row);
-  return hasAnyMorning(row) || hasAnyAfternoon(row);
+  const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
+  const tarde = getField(row, ["tarde","TARDE","Tarde"]);
+
+  const p1 = periodsPresent(manha);
+  const p2 = periodsPresent(tarde);
+
+  const hasM = p1.hasM || p2.hasM;
+  const hasT = p1.hasT || p2.hasT;
+
+  if (periodo === "MANHA") return hasM;
+  if (periodo === "TARDE") return hasT;
+  return hasM || hasT; // AMBOS
 }
 
-// ✅ e pra renderizar os horários no card, use isso:
+// ✅ Monta bloco de horários no card (agrupa por manhã/tarde pelo horário real)
 function makeTimeBlockSmart(row){
   const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
   const tarde = getField(row, ["tarde","TARDE","Tarde"]);
@@ -175,13 +177,32 @@ function makeTimeBlockSmart(row){
   const afternoonList = [];
 
   for (const c of candidates) {
-    if (!hasTimeValue(c)) continue;
-    const period = classifyAsPeriod(c);
-    if (period === "MANHA") morningList.push(displayRange(c));
-    else if (period === "TARDE") afternoonList.push(displayRange(c));
-    else {
-      // se não conseguir classificar, joga como tarde (mais seguro)
-      afternoonList.push(displayRange(c));
+    const ranges = splitIntoRanges(c);
+    if (!ranges.length) continue;
+
+    // Decide o período por análise dos horários existentes na célula
+    const pp = periodsPresent(c);
+    // Se a célula tiver horários mistos, joga no período correspondente (pode aparecer nos dois)
+    if (pp.hasM) {
+      // pega só as faixas cujo início seja < 12:00
+      const times = extractAllTimes(c);
+      for (let i=0; i<times.length; i+=2){
+        const a = times[i];
+        const b = times[i+1] || "";
+        const mins = toMinutes(a);
+        const label = displayRangeFromTimes(a, b);
+        if (label && mins != null && mins < 12*60) morningList.push(label);
+      }
+    }
+    if (pp.hasT) {
+      const times = extractAllTimes(c);
+      for (let i=0; i<times.length; i+=2){
+        const a = times[i];
+        const b = times[i+1] || "";
+        const mins = toMinutes(a);
+        const label = displayRangeFromTimes(a, b);
+        if (label && mins != null && mins >= 12*60) afternoonList.push(label);
+      }
     }
   }
 
@@ -206,13 +227,11 @@ function makeTimeBlockSmart(row){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Estado
   let data = [];
   let activeDay = guessTodayKey();
   let uiState = { rota: "TODAS", ag: "TODOS", periodo: "AMBOS", query: "" };
   let appliedState = { ...uiState };
 
-  // Elementos (tolerantes)
   const $days = document.getElementById("days");
   const $list = document.getElementById("list");
   const $meta = document.getElementById("meta");
@@ -224,7 +243,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const $rota = document.getElementById("rota");
   const $ag = document.getElementById("ag");
 
-  // pega botões de período por data-p (independe de id/class)
   const periodButtons = Array.from(document.querySelectorAll("[data-p]"))
     .filter(b => ["AMBOS","MANHA","TARDE"].includes((b.dataset.p || "").toUpperCase()));
 
@@ -251,6 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setUpdatedAtText(payload){
     if (!$updatedAt) return;
+
     if (Array.isArray(payload)) {
       $updatedAt.textContent = `Registros: ${data.length}`;
       return;
@@ -328,24 +347,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const pieces = [r.especialidade, r.cidade, r.rota ? `Rota: ${r.rota}` : ""].filter(Boolean);
       sub.textContent = pieces.join(" • ");
 
-      const manha = getField(r, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
-      const tarde = getField(r, ["tarde","TARDE","Tarde"]);
-
-      const times = document.createElement("div");
-      times.className = "times";
-
-      if (hasTimeValue(manha)) {
-        const row = document.createElement("div");
-        row.className = "time-row";
-        row.innerHTML = `<span class="time-label">Manhã</span><span class="time-value">${displayRange(manha)}</span>`;
-        times.appendChild(row);
-      }
-      if (hasTimeValue(tarde)) {
-        const row = document.createElement("div");
-        row.className = "time-row";
-        row.innerHTML = `<span class="time-label">Tarde</span><span class="time-value">${displayRange(tarde)}</span>`;
-        times.appendChild(row);
-      }
+      // ✅ usa o bloco inteligente (não depende da coluna estar certa)
+      const timeBlock = makeTimeBlockSmart(r);
 
       const pills = document.createElement("div");
       pills.className = "pills";
@@ -383,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.appendChild(title);
       card.appendChild(sub);
-      if (times.childNodes.length) card.appendChild(times);
+      if (timeBlock.childNodes.length) card.appendChild(timeBlock);
       if (pills.childNodes.length) card.appendChild(pills);
       if (addr.textContent || addr.childNodes.length) card.appendChild(addr);
       if (r.observacao) card.appendChild(obs);
@@ -424,7 +427,6 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   }
 
-  // Eventos
   if ($q){
     $q.addEventListener("input", ev => uiState.query = ev.target.value || "");
     $q.addEventListener("keydown", e => { if(e.key === "Enter") applyFilters(); });
@@ -443,9 +445,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if ($applyBtn) $applyBtn.addEventListener("click", applyFilters);
   if ($refreshBtn) $refreshBtn.addEventListener("click", load);
 
-  // Estado inicial do período
   setPeriodoActiveUI(uiState.periodo);
-
-  // GO
   load();
 });
