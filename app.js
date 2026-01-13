@@ -1,7 +1,10 @@
-// app.js — versão blindada + períodos por horário real (corrige tarde/manhã invertidos)
-// Mantém: filtros rota/agendamento, botões OK/Atualizar, Waze, ordem alfabética
+// app.js — versão blindada + períodos por HORÁRIO REAL (corte 13:00)
+// AGENDADO (S/N) só aparece no filtro de Agendado
 
 const RAW_DATA_URL_BASE = "https://raw.githubusercontent.com/mcbighetti/agenda-medicos/main/data.json";
+
+// ✅ corte: manhã até 12:59, tarde a partir 13:00
+const MIN_TARDE = 13 * 60; // 13:00 em minutos
 
 const DAYS = [
   { key: 'SEG', label: 'Seg' },
@@ -52,7 +55,7 @@ function excelFractionToHHmm(n){
   return `${hh}:${mm}`;
 }
 
-// Extrai TODOS os horários HH:mm presentes no texto (robusto)
+// Extrai todos HH:mm do texto
 function extractAllTimes(raw){
   if (raw == null) return [];
   if (typeof raw === "number") {
@@ -92,9 +95,8 @@ function displayRangeFromTimes(t1, t2){
   return "";
 }
 
-// Divide uma célula em “faixas” sequenciais: (t0,t1), (t2,t3)...
-// Ex: "08:00-11:30 13:30-17:00" => ["08:00 às 11:30", "13:30 às 17:00"]
-function splitIntoRanges(raw){
+// Divide uma célula em faixas (t0,t1), (t2,t3)...
+function splitIntoRangesWithStart(raw){
   const times = extractAllTimes(raw);
   if (times.length === 0) return [];
 
@@ -102,23 +104,14 @@ function splitIntoRanges(raw){
   for (let i=0; i<times.length; i+=2){
     const a = times[i];
     const b = times[i+1] || "";
-    ranges.push(displayRangeFromTimes(a, b));
+    const mins = toMinutes(a);
+    const label = displayRangeFromTimes(a, b);
+    if (label && mins != null) ranges.push({ startMins: mins, label });
   }
-  return ranges.filter(Boolean);
+  return ranges;
 }
 
-// Detecta presença de manhã/tarde em uma célula olhando TODOS horários
-function periodsPresent(raw){
-  const times = extractAllTimes(raw).map(toMinutes).filter(v => v != null);
-  let hasM = false;
-  let hasT = false;
-  for (const mins of times){
-    if (mins < 12*60) hasM = true;
-    else hasT = true;
-  }
-  return { hasM, hasT };
-}
-
+// AGENDADO? S/N é a verdade
 function isAgendado(row){
   const ag = getField(row, ["agendado","AGENDADO","AGENDADO?","Agendado"]);
   return (ag || "").toString().trim().toUpperCase() === "S";
@@ -126,17 +119,14 @@ function isAgendado(row){
 
 function matchesQuery(row, q) {
   if (!q) return true;
-
   const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
   const tarde = getField(row, ["tarde","TARDE","Tarde"]);
   const ag = getField(row, ["agendado","AGENDADO","AGENDADO?","Agendado"]);
-
   const hay = normalize([
     row.rota, row.medico_nome, row.especialidade, row.cidade, row.bairro, row.endereco,
     row.observacao, row.telefone, row.celular, row.email,
     String(manha ?? ""), String(tarde ?? ""), String(ag ?? "")
   ].join(" | "));
-
   return hay.includes(q);
 }
 
@@ -150,61 +140,35 @@ function buildWazeLink(row){
   return `https://waze.com/ul?q=${encodeURIComponent(qq)}&navigate=yes`;
 }
 
-// ✅ Período por horário REAL (não depende de “coluna manhã/tarde” estar correta no JSON)
-function matchPeriodo(row, periodo){
+// ✅ período por INÍCIO das faixas (corte 13:00)
+function rowHasMorning(row){
   const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
   const tarde = getField(row, ["tarde","TARDE","Tarde"]);
-
-  const p1 = periodsPresent(manha);
-  const p2 = periodsPresent(tarde);
-
-  const hasM = p1.hasM || p2.hasM;
-  const hasT = p1.hasT || p2.hasT;
-
-  if (periodo === "MANHA") return hasM;
-  if (periodo === "TARDE") return hasT;
-  return hasM || hasT; // AMBOS
+  const all = [...splitIntoRangesWithStart(manha), ...splitIntoRangesWithStart(tarde)];
+  return all.some(r => r.startMins < MIN_TARDE);
+}
+function rowHasAfternoon(row){
+  const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
+  const tarde = getField(row, ["tarde","TARDE","Tarde"]);
+  const all = [...splitIntoRangesWithStart(manha), ...splitIntoRangesWithStart(tarde)];
+  return all.some(r => r.startMins >= MIN_TARDE);
+}
+function matchPeriodo(row, periodo){
+  if (periodo === "MANHA") return rowHasMorning(row);
+  if (periodo === "TARDE") return rowHasAfternoon(row);
+  return rowHasMorning(row) || rowHasAfternoon(row);
 }
 
-// ✅ Monta bloco de horários no card (agrupa por manhã/tarde pelo horário real)
+// ✅ card com manhã e tarde no mesmo dia, em linhas separadas
 function makeTimeBlockSmart(row){
   const manha = getField(row, ["manha","MANHA","MANHÃ","Manhã","Manha"]);
   const tarde = getField(row, ["tarde","TARDE","Tarde"]);
 
-  const candidates = [manha, tarde].filter(v => v != null && String(v).trim() !== "");
+  const all = [...splitIntoRangesWithStart(manha), ...splitIntoRangesWithStart(tarde)];
+  if (!all.length) return document.createElement("div");
 
-  const morningList = [];
-  const afternoonList = [];
-
-  for (const c of candidates) {
-    const ranges = splitIntoRanges(c);
-    if (!ranges.length) continue;
-
-    // Decide o período por análise dos horários existentes na célula
-    const pp = periodsPresent(c);
-    // Se a célula tiver horários mistos, joga no período correspondente (pode aparecer nos dois)
-    if (pp.hasM) {
-      // pega só as faixas cujo início seja < 12:00
-      const times = extractAllTimes(c);
-      for (let i=0; i<times.length; i+=2){
-        const a = times[i];
-        const b = times[i+1] || "";
-        const mins = toMinutes(a);
-        const label = displayRangeFromTimes(a, b);
-        if (label && mins != null && mins < 12*60) morningList.push(label);
-      }
-    }
-    if (pp.hasT) {
-      const times = extractAllTimes(c);
-      for (let i=0; i<times.length; i+=2){
-        const a = times[i];
-        const b = times[i+1] || "";
-        const mins = toMinutes(a);
-        const label = displayRangeFromTimes(a, b);
-        if (label && mins != null && mins >= 12*60) afternoonList.push(label);
-      }
-    }
-  }
+  const morningList = all.filter(r => r.startMins < MIN_TARDE).map(r => r.label);
+  const afternoonList = all.filter(r => r.startMins >= MIN_TARDE).map(r => r.label);
 
   const wrap = document.createElement("div");
   wrap.className = "times";
@@ -215,7 +179,6 @@ function makeTimeBlockSmart(row){
     rowEl.innerHTML = `<span class="time-label">Manhã</span><span class="time-value">${morningList.join(" • ")}</span>`;
     wrap.appendChild(rowEl);
   }
-
   if (afternoonList.length) {
     const rowEl = document.createElement("div");
     rowEl.className = "time-row";
@@ -269,7 +232,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setUpdatedAtText(payload){
     if (!$updatedAt) return;
-
     if (Array.isArray(payload)) {
       $updatedAt.textContent = `Registros: ${data.length}`;
       return;
@@ -292,19 +254,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const q = normalize(appliedState.query);
     const rota = appliedState.rota;
-    const agFilter = appliedState.ag;
+    const agFilter = appliedState.ag;   // "TODOS" | "S" | "N"
     const periodo = appliedState.periodo;
 
     const filtered = data
       .filter(r => (r.dia_semana || "").toUpperCase() === activeDay)
       .filter(r => (rota === "TODAS" ? true : (r.rota || "") === rota))
+
+      // ✅ regra AGENDADO:
+      // - se filtro = S => só agendados
+      // - se filtro = TODOS ou N => EXCLUI agendados
       .filter(r => {
-        const ag = getField(r, ["agendado","AGENDADO","AGENDADO?","Agendado"]);
-        const v = (ag || "").toString().trim().toUpperCase();
-        if (agFilter === "S") return v === "S";
-        if (agFilter === "N") return v === "N" || v === "";
-        return true;
+        const s = isAgendado(r);
+        if (agFilter === "S") return s;
+        return !s; // TODOS/N não mostram agendados
       })
+
+      // ✅ período só é aplicado aos NÃO agendados (porque agendado já foi filtrado acima)
       .filter(r => matchPeriodo(r, periodo))
       .filter(r => matchesQuery(r, q))
       .sort((a,b) => (a.medico_nome || "").localeCompare((b.medico_nome || ""), "pt-BR", { sensitivity: "base" }));
@@ -332,7 +298,8 @@ document.addEventListener("DOMContentLoaded", () => {
       name.textContent = r.medico_nome || "(Sem nome)";
 
       const right = document.createElement("div");
-      if (isAgendado(r)) {
+      // ✅ badge só quando estiver no filtro S (porque só aparece lá)
+      if (agFilter === "S") {
         const badge = document.createElement("span");
         badge.className = "badge-ag";
         badge.textContent = "AGENDADO";
@@ -347,7 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const pieces = [r.especialidade, r.cidade, r.rota ? `Rota: ${r.rota}` : ""].filter(Boolean);
       sub.textContent = pieces.join(" • ");
 
-      // ✅ usa o bloco inteligente (não depende da coluna estar certa)
       const timeBlock = makeTimeBlockSmart(r);
 
       const pills = document.createElement("div");
@@ -432,6 +398,8 @@ document.addEventListener("DOMContentLoaded", () => {
     $q.addEventListener("keydown", e => { if(e.key === "Enter") applyFilters(); });
   }
   if ($rota) $rota.addEventListener("change", e => uiState.rota = e.target.value);
+
+  // ag: "TODOS"/"S"/"N" — mas "TODOS" e "N" escondem agendados
   if ($ag) $ag.addEventListener("change", e => uiState.ag = e.target.value);
 
   periodButtons.forEach(btn => {
