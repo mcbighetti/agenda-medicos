@@ -359,4 +359,13 @@ body{
   .actions{ gap: 10px; }
   .grid{ grid-template-columns: 1fr; }
   .brand-logo{ height: 30px; }
+
+  .pill-link{
+  text-decoration: none;
+  cursor: pointer;
+}
+.pill-link:hover{
+  opacity: .9;
+}
+
 }
